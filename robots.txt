@@ -8,5 +8,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://www.laosiji.tech/sitemap.xml
-Sitemap: http://www.laosiji.tech/baidusitemap.xml
+Sitemap: http://laosiji.tech/sitemap.xml
+Sitemap: http://laosiji.tech/baidusitemap.xml
