@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://laosiji.tech/hello-world/</loc>
+    
+    <lastmod>2017-05-24T15:27:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://laosiji.tech/404.html</loc>
     
     <lastmod>2017-05-24T14:53:36.000Z</lastmod>
