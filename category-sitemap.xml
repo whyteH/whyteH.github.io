@@ -7,11 +7,10 @@
     </url>
 
     <url>
-        <loc>http://laosiji.tech/hello-world/</loc>
+        <loc>http://laosiji.tech/categories/Life/</loc>
         <lastmod>2017-05-24T15:57:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
+        <priority>0.2</priority>
     </url>
 
 </urlset>
