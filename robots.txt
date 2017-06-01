@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /categories/
-Allow: /about/
 Allow: /archives/
 Disallow: /vendors/
 Disallow: /js/
