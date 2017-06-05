@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Children's-Day/</loc>
+    <lastmod>2017-06-05T16:05:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>六一儿童节</title>
+        <pubTime>2017-06-01T14:10:08.000Z</pubTime>
+        
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Toolbar-Not-Search-Icon/</loc>
     <lastmod>2017-06-05T15:09:27.000Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Children's-Day/</loc>
-    <lastmod>2017-06-01T16:35:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>六一儿童节</title>
-        <pubTime>2017-06-01T14:10:08.000Z</pubTime>
-        
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
           
         </display>
     </data>
