@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Whyte">
+  <meta name="keywords" content="Fragment,">
 
 
 
@@ -84,16 +84,17 @@
 
 
 
-<meta name="description" content="I Believe">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://laosiji.tech/categories/index.html">
+<meta name="description" content="前言在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。 使用使用Fragment时就必定会用到FragmentManager，在FragmentManager中有两个抽象方法：  getFragment(Bundle bundle, String key) putFragment(Bu">
+<meta name="keywords" content="Fragment">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Activity销毁时Tablayout+Viewpager+Fragment状态保存">
+<meta property="og:url" content="http://laosiji.tech/Save-state-for-fragment/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="I Believe">
-<meta property="og:updated_time" content="2017-05-25T12:43:21.000Z">
+<meta property="og:description" content="前言在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。 使用使用Fragment时就必定会用到FragmentManager，在FragmentManager中有两个抽象方法：  getFragment(Bundle bundle, String key) putFragment(Bu">
+<meta property="og:updated_time" content="2017-06-22T11:16:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="I Believe">
+<meta name="twitter:title" content="Activity销毁时Tablayout+Viewpager+Fragment状态保存">
+<meta name="twitter:description" content="前言在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。 使用使用Fragment时就必定会用到FragmentManager，在FragmentManager中有两个抽象方法：  getFragment(Bundle bundle, String key) putFragment(Bu">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://laosiji.tech/categories/">
+  <link rel="canonical" href="http://laosiji.tech/Save-state-for-fragment/">
 
 
 
 
 
-  <title>分类 | Whyte's blogs</title>
+  <title>Activity销毁时Tablayout+Viewpager+Fragment状态保存 | Whyte's blogs</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -163,7 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -288,25 +289,187 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h2 class="post-title" itemprop="name headline">分类</h2>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://laosiji.tech/Save-state-for-fragment/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Whyte">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Whyte's blogs">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 3 个分类
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Activity销毁时Tablayout+Viewpager+Fragment状态保存</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T19:13:19+08:00">
+                2017-06-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/Save-state-for-fragment/" class="leancloud_visitors" data-flag-title="Activity销毁时Tablayout+Viewpager+Fragment状态保存">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用Fragment时就必定会用到<strong>FragmentManager</strong>，在FragmentManager中有两个抽象方法：</p>
+<ol>
+<li><strong>getFragment(Bundle bundle, String key)</strong></li>
+<li><strong>putFragment(Bundle bundle, String key, Fragment fragment)</strong></li>
+</ol>
+<p>抽象方法getFragment实现类下的源码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">putFragment</span><span class="params">(Bundle bundle, String key, Fragment fragment)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (fragment.mIndex &lt; <span class="number">0</span>) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment "</span> + fragment+ <span class="string">" is not currently in the FragmentManager"</span>));</div><div class="line">    &#125;</div><div class="line">    bundle.putInt(key, fragment.mIndex);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>抽象方法putFragment实现类下的源码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Fragment <span class="title">getFragment</span><span class="params">(Bundle bundle, String key)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> index = bundle.getInt(key, -<span class="number">1</span>);</div><div class="line">    <span class="keyword">if</span> (index == -<span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (index &gt;= mActive.size()) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment no longer exists for key "</span>+ key + <span class="string">": index "</span> + index));</div><div class="line">    &#125;</div><div class="line">    Fragment f = mActive.get(index);</div><div class="line">    <span class="keyword">if</span> (f == <span class="keyword">null</span>) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment no longer exists for key "</span>+ key + <span class="string">": index "</span> + index));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> f;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>从源码中发现key是为了区分保存在Bundle中的Fragment的，因而key可以随意命名，但是获取和保存的必须一致。<br>在Activity中实现的<strong>onSaveInstanceState(Bundle outState)</strong>方法中调用<strong>putFragment</strong>保存Fragment<br>在<strong>onCreate(Bundle savedInstanceState)</strong>中去调用<strong>getFragment</strong>获取Fragment</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 欢迎下载源码，源码中有对<strong>FragmentPagerAdapter</strong>抽取封装了一个基类，方便项目中使用。<br> <a href="https://github.com/whyteH/SaveStateForViewPager" target="_blank" rel="external">源代码</a></p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fragment/" rel="tag"># Fragment</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Ubuntu-and-win-transfer/" rel="next" title="虚拟机中的Ubuntu与主机Win交互">
+                <i class="fa fa-chevron-left"></i> 虚拟机中的Ubuntu与主机Win交互
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -315,6 +478,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODgwOC81Mzc4"></div>
+    
+  </div>
+
 
         </div>
         
@@ -334,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Whyte">
           <p class="site-author-name" itemprop="name">Whyte</p>
@@ -415,6 +593,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -530,6 +724,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
@@ -564,6 +762,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
