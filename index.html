@@ -382,6 +382,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  294
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -400,7 +431,8 @@
           前言在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。
 使用使用Fragment时就必定会用到FragmentManager，在FragmentManager中有两个抽象方法：
 
-get
+getFragment(Bundle bundle, String key)
+putFragment(Bu
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -536,6 +568,37 @@ get
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  525
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
           
 
@@ -554,7 +617,11 @@ get
           环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图
 
 安装SSH Server
-利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我
+利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：
+
+sudo apt-get install openssh-server 
+
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -690,6 +757,37 @@ get
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  305
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -705,7 +803,8 @@ get
       
         
           
-          方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDi
+          方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDirectory())));
+可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -841,6 +940,37 @@ get
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  292
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -858,7 +988,9 @@ get
           
           问题项目功能越堆越多，就会发生一些莫名的奇妙的问题。有问题总是有原因的嘛，所以今天就说一下，R文件丢失，项目竟然能跑起来，而且还到处报红，这对于一个强迫症而言，简直不能忍。最主要的还是ctrl+鼠标左键不能进行资源文件的跳转，还需要先找布局文件，再copy资源Id去找，不能忍。效果如下图：
 
-有问题
+有问题当然是要解决的，接下来是见证奇迹的时刻了
+解决
+先找到Android Studio 安卓目录中的id
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -994,6 +1126,37 @@ get
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  163
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1011,7 +1174,7 @@ get
           
           前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图
 
-代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = 
+代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searc
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1147,6 +1310,37 @@ get
           
 
           
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  390
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
           
 
@@ -1162,7 +1356,7 @@ get
       
         
           
-          今天是二零一七年六月一日，儿童节，我也想过个节。今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。最近这两年互联网上的过节气氛越来
+          今天是二零一七年六月一日，儿童节，我也想过个节。今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。最近这两年互联网上的过节气氛越来越浓烈，当然不乏一些商家借着过节做营销，人们怀旧情绪好像越来越浓烈了。年后换了份新的工作，来这公司也
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1297,6 +1491,37 @@ get
 
           
 
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  19
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
           
 
           
