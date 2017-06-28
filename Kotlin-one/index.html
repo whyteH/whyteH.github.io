@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="MediaScannerConnection,">
+  <meta name="keywords" content="Kotlin语法糖,">
 
 
 
@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse(&quot;file://&quot;+ Environment.getExternalStorageDirectory()))); 可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED">
-<meta name="keywords" content="MediaScannerConnection">
+<meta name="description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
+<meta name="keywords" content="Kotlin语法糖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android媒体库数据更新解决办法">
-<meta property="og:url" content="http://laosiji.tech/Android-media-data-update/index.html">
+<meta property="og:title" content="学习kotlin语法糖（一）">
+<meta property="og:url" content="http://laosiji.tech/Kotlin-one/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse(&quot;file://&quot;+ Environment.getExternalStorageDirectory()))); 可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED">
-<meta property="og:updated_time" content="2017-06-14T14:33:16.000Z">
+<meta property="og:description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
+<meta property="og:updated_time" content="2017-06-28T11:32:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android媒体库数据更新解决办法">
-<meta name="twitter:description" content="方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse(&quot;file://&quot;+ Environment.getExternalStorageDirectory()))); 可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED">
+<meta name="twitter:title" content="学习kotlin语法糖（一）">
+<meta name="twitter:description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://laosiji.tech/Android-media-data-update/">
+  <link rel="canonical" href="http://laosiji.tech/Kotlin-one/">
 
 
 
 
 
-  <title>Android媒体库数据更新解决办法 | Whyte's blogs</title>
+  <title>学习kotlin语法糖（一） | Whyte's blogs</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -298,7 +298,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://laosiji.tech/Android-media-data-update/">
+    <link itemprop="mainEntityOfPage" href="http://laosiji.tech/Kotlin-one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Whyte">
@@ -315,7 +315,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Android媒体库数据更新解决办法</h2>
+          <h2 class="post-title" itemprop="name headline">学习kotlin语法糖（一）</h2>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T22:27:20+08:00">
-                2017-06-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T19:25:07+08:00">
+                2017-06-28
               </time>
             
 
@@ -350,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/Kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">Kotlin</span>
                   </a>
                 </span>
 
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/Android-media-data-update/" class="leancloud_visitors" data-flag-title="Android媒体库数据更新解决办法">
+             <span id="/Kotlin-one/" class="leancloud_visitors" data-flag-title="学习kotlin语法糖（一）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  305
+                  647
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -426,10 +426,26 @@
       
 
       
-        <h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sendBroadcast(<span class="keyword">new</span> Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse(<span class="string">"file://"</span>+ Environment.getExternalStorageDirectory())));</div></pre></td></tr></table></figure></p>
-<p>可以发送两个消息：<br>Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；<br>Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；<br>经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，会出现如下的异常：<br><strong>Permission Denial: not allowed to send broadcast android.intent.action.MEDIA_MOUNTED</strong></p>
-<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>利用MediaScannerConnection实现对添加的文件进行扫描，实现数据实时更新，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MediaScanner</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = MediaScanner.class.getSimpleName();</div><div class="line"></div><div class="line">    <span class="keyword">private</span> MediaScannerConnection mConn = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> ScannerClient mClient;</div><div class="line">    <span class="keyword">private</span> File mFile = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MediaScanner</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mClient == <span class="keyword">null</span>) &#123;</div><div class="line">            mClient = <span class="keyword">new</span> ScannerClient();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (mConn == <span class="keyword">null</span>) &#123;</div><div class="line">            mConn = <span class="keyword">new</span> MediaScannerConnection(context, mClient);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ScannerClient</span> <span class="keyword">implements</span> <span class="title">MediaScannerConnection</span>.<span class="title">MediaScannerConnectionClient</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMediaScannerConnected</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (mFile == <span class="keyword">null</span>) &#123;</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            scan(mFile);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScanCompleted</span><span class="params">(String path, Uri uri)</span> </span>&#123;</div><div class="line">            mConn.disconnect();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 递归实现扫描文件夹或文件</div><div class="line">         *</div><div class="line">         * <span class="doctag">@param</span> file 文件夹或文件</div><div class="line">         */</div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">scan</span><span class="params">(File file)</span> </span>&#123;</div><div class="line">            Log.i(TAG, <span class="string">"scan "</span> + file.getAbsolutePath());</div><div class="line">            <span class="keyword">if</span> (file.isFile()) &#123;<span class="comment">//为文件时，直接取绝对路径</span></div><div class="line">                mConn.scanFile(file.getAbsolutePath(), <span class="keyword">null</span>);</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            File[] files = file.listFiles();</div><div class="line">            <span class="keyword">if</span> (files == <span class="keyword">null</span>) &#123;</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (File f : file.listFiles()) &#123;</div><div class="line">                scan(f);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">scanFile</span><span class="params">(File file)</span> </span>&#123;</div><div class="line">        mFile = file;</div><div class="line">        mConn.connect();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 有什么问题欢迎留言沟通交流。</p>
+        <p>Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。<br>Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。<br>由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。</p>
+<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><ol>
+<li>一次赋值（只读）的局部变量：<strong>val</strong></li>
+<li>可变变量：<strong>var</strong></li>
+</ol>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> a: <span class="built_in">Int</span> = <span class="number">1</span>  <span class="comment">// 立即赋值</span></div><div class="line">    <span class="keyword">val</span> b = <span class="number">2</span>   <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    <span class="keyword">val</span> c: <span class="built_in">Int</span> <span class="comment">// 如果没有初始值类型不能省略</span></div><div class="line">    c = <span class="number">3</span>       <span class="comment">// 明确赋值</span></div><div class="line">    c += <span class="number">1</span> <span class="comment">//会报错，val不能重新分配</span></div><div class="line">    println(<span class="string">"a = <span class="subst">$a</span>, b = <span class="subst">$b</span>, c = <span class="subst">$c</span>"</span>)</div><div class="line"></div><div class="line">    <span class="keyword">var</span> x = <span class="number">5</span> <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    x += <span class="number">1</span></div><div class="line">    println(<span class="string">"x = <span class="subst">$x</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>带有两个Int参数，返回指定Int值的函数</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">*返回Int类型的参数</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">    <span class="keyword">return</span> a + b</div><div class="line">&#125;</div><div class="line"><span class="comment">//可以省略花括号并且在 = 符号之后指定代码体即可</span></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt1</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = a + b</div></pre></td></tr></table></figure>
+<p>带有两个Int参数，返回自动推断类型的函数<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnVar</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = a + b</div></pre></td></tr></table></figure></p>
+<p>返回无意义的值的函数</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printSum</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Unit</span> &#123;</div><div class="line">    println(<span class="string">"sum of <span class="subst">$a</span> and <span class="subst">$b</span> is <span class="subst">$&#123;a + b&#125;</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>也可不返回值</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printSum</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> &#123;</div><div class="line">    println(<span class="string">"sum of <span class="subst">$a</span> and <span class="subst">$b</span> is <span class="subst">$&#123;a + b&#125;</span>"</span>)</div><div class="line">     <span class="comment">// 'return Unit' 或者 'return' 是可选的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>默认参数<br>函数参数可以有默认值，当省略相应的参数时使用默认值，默认值通过类型后面的 = 及给出的值来定义。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">defaultParam</span><span class="params">(b: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;, off: <span class="type">Int</span> = <span class="number">0</span>, len: <span class="type">Int</span> = b.size)</span></span> &#123;</div><div class="line">    println(<span class="string">"len is "</span> + len)</div><div class="line">&#125;</div><div class="line"><span class="comment">//调用</span></div><div class="line">defaultParam(arrayOf(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>))</div></pre></td></tr></table></figure>
+<p>可变数量的参数<br>函数的参数（通常是最后一个）可以用<strong>vararg</strong>修饰符标记</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T&gt;</span> <span class="title">asList</span><span class="params">(<span class="keyword">vararg</span> ts: <span class="type">T</span>)</span></span>: List&lt;T&gt; &#123;</div><div class="line">    <span class="keyword">val</span> result = ArrayList&lt;T&gt;()        </div><div class="line">    <span class="keyword">for</span> (t <span class="keyword">in</span> ts)                      </div><div class="line">        result.add(t)                  </div><div class="line">    <span class="keyword">return</span> result                      </div><div class="line">&#125; </div><div class="line"><span class="comment">//调用</span></div><div class="line"><span class="keyword">val</span> list = asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div></pre></td></tr></table></figure>
+<p>命名参数<br>可以在调用函数时使用命名的函数参数。当一个函数有大量的参数或默认参数时这会非常方便。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">reformat</span><span class="params">(a: <span class="type">String</span>,b: <span class="type">Boolean</span> = <span class="literal">true</span>,c: <span class="type">Boolean</span> = <span class="literal">true</span>,d: <span class="type">Boolean</span> = <span class="literal">false</span>,e: <span class="type">Char</span> = <span class="string">' '</span>)</span></span> &#123;</div><div class="line">    println(<span class="string">"<span class="subst">$a</span>--<span class="subst">$b</span>--<span class="subst">$c</span>--<span class="subst">$d</span>--<span class="subst">$e</span>"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">//使用默认参数来调用它</span></div><div class="line">reformat(<span class="string">"1"</span>)</div><div class="line"><span class="comment">//使用非默认参数调用它</span></div><div class="line">reformat(<span class="string">"1"</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="string">'['</span>)</div><div class="line"><span class="comment">//使用命名参数我们可以使代码更具有可读性</span></div><div class="line">reformat(<span class="string">"1"</span>, b = <span class="literal">true</span>, c = <span class="literal">false</span>, d = <span class="literal">false</span>, e = <span class="string">']'</span>)</div><div class="line"><span class="comment">//也可以指定其中一个命名参数调用</span></div><div class="line">reformat(<span class="string">"1"</span>, e = <span class="string">'q'</span>)</div></pre></td></tr></table></figure>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>下载查看<a href="https://github.com/whyteH/KotlinTest" target="_blank" rel="external">源码</a> </p>
       
     </div>
 
@@ -458,7 +474,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MediaScannerConnection/" rel="tag"># MediaScannerConnection</a>
+            <a href="/tags/Kotlin语法糖/" rel="tag"># Kotlin语法糖</a>
           
         </div>
       
@@ -471,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/R-lose-but-can-run-project/" rel="next" title="R文件丢失，到处报红，但项目仍可以跑起来">
-                <i class="fa fa-chevron-left"></i> R文件丢失，到处报红，但项目仍可以跑起来
+              <a href="/Save-state-for-fragment/" rel="next" title="Activity销毁时Tablayout+Viewpager+Fragment状态保存">
+                <i class="fa fa-chevron-left"></i> Activity销毁时Tablayout+Viewpager+Fragment状态保存
               </a>
             
           </div>
@@ -480,10 +496,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Ubuntu-and-win-transfer/" rel="prev" title="虚拟机中的Ubuntu与主机Win交互">
-                虚拟机中的Ubuntu与主机Win交互 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -632,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一："><span class="nav-number">1.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二："><span class="nav-number">2.</span> <span class="nav-text">方法二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#局部变量"><span class="nav-number">1.</span> <span class="nav-text">局部变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
