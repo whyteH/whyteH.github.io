@@ -4,11 +4,31 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Kotlin-one/</loc>
-    <lastmod>2017-06-28T11:32:32.000Z</lastmod>
+    <loc>http://laosiji.tech/Kotlin-two/</loc>
+    <lastmod>2017-06-29T14:07:25.000Z</lastmod>
     <data>
         <display>
-        <title>学习kotlin语法糖（一）</title>
+        <title>跟我一起学kotlin语法糖（二）——灵活的控制流表达式</title>
+        <pubTime>2017-06-28T12:47:13.000Z</pubTime>
+        
+        <tag>Kotlin语法糖</tag>
+         
+         
+           
+             
+              <breadCrumb title="Kotlin" url="http://laosiji.tech/categories/Kotlin/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Kotlin-one/</loc>
+    <lastmod>2017-06-28T13:35:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>学习kotlin语法糖（一）——变量及函数声明</title>
         <pubTime>2017-06-28T11:25:07.000Z</pubTime>
         
         <tag>Kotlin语法糖</tag>

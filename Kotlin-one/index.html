@@ -87,13 +87,13 @@
 <meta name="description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
 <meta name="keywords" content="Kotlin语法糖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习kotlin语法糖（一）">
+<meta property="og:title" content="学习kotlin语法糖（一）——变量及函数声明">
 <meta property="og:url" content="http://laosiji.tech/Kotlin-one/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
 <meta property="og:description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
-<meta property="og:updated_time" content="2017-06-28T11:32:32.000Z">
+<meta property="og:updated_time" content="2017-06-28T13:35:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习kotlin语法糖（一）">
+<meta name="twitter:title" content="学习kotlin语法糖（一）——变量及函数声明">
 <meta name="twitter:description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。 局部变量 一">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>学习kotlin语法糖（一） | Whyte's blogs</title>
+  <title>学习kotlin语法糖（一）——变量及函数声明 | Whyte's blogs</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">学习kotlin语法糖（一）</h2>
+          <h2 class="post-title" itemprop="name headline">学习kotlin语法糖（一）——变量及函数声明</h2>
         
 
         <div class="post-meta">
@@ -367,7 +367,7 @@
 
           
           
-             <span id="/Kotlin-one/" class="leancloud_visitors" data-flag-title="学习kotlin语法糖（一）">
+             <span id="/Kotlin-one/" class="leancloud_visitors" data-flag-title="学习kotlin语法糖（一）——变量及函数声明">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -434,7 +434,8 @@
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> a: <span class="built_in">Int</span> = <span class="number">1</span>  <span class="comment">// 立即赋值</span></div><div class="line">    <span class="keyword">val</span> b = <span class="number">2</span>   <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    <span class="keyword">val</span> c: <span class="built_in">Int</span> <span class="comment">// 如果没有初始值类型不能省略</span></div><div class="line">    c = <span class="number">3</span>       <span class="comment">// 明确赋值</span></div><div class="line">    c += <span class="number">1</span> <span class="comment">//会报错，val不能重新分配</span></div><div class="line">    println(<span class="string">"a = <span class="subst">$a</span>, b = <span class="subst">$b</span>, c = <span class="subst">$c</span>"</span>)</div><div class="line"></div><div class="line">    <span class="keyword">var</span> x = <span class="number">5</span> <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    x += <span class="number">1</span></div><div class="line">    println(<span class="string">"x = <span class="subst">$x</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>带有两个Int参数，返回指定Int值的函数</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">*返回Int类型的参数</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">    <span class="keyword">return</span> a + b</div><div class="line">&#125;</div><div class="line"><span class="comment">//可以省略花括号并且在 = 符号之后指定代码体即可</span></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt1</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = a + b</div></pre></td></tr></table></figure>
-<p>带有两个Int参数，返回自动推断类型的函数<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnVar</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = a + b</div></pre></td></tr></table></figure></p>
+<p>带有两个Int参数，返回自动推断类型的函数</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnVar</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = a + b</div></pre></td></tr></table></figure>
 <p>返回无意义的值的函数</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printSum</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Unit</span> &#123;</div><div class="line">    println(<span class="string">"sum of <span class="subst">$a</span> and <span class="subst">$b</span> is <span class="subst">$&#123;a + b&#125;</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>也可不返回值</p>
@@ -496,6 +497,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Kotlin-two/" rel="prev" title="跟我一起学kotlin语法糖（二）——灵活的控制流表达式">
+                跟我一起学kotlin语法糖（二）——灵活的控制流表达式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +572,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
