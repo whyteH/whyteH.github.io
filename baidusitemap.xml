@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://laosiji.tech/Java-Pattern-quote/</loc>
-    <lastmod>2017-07-02T04:17:12.000Z</lastmod>
+    <lastmod>2017-07-02T05:02:30.000Z</lastmod>
     <data>
         <display>
-        <title>Java正则表达式Pattern.quote()方法使用及其详解</title>
+        <title>Java字符串正则匹配避坑指南之一</title>
         <pubTime>2017-07-02T03:24:02.000Z</pubTime>
         
         <tag>Pattern</tag>
