@@ -4,14 +4,36 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Kotlin-three/</loc>
+    <lastmod>2017-07-02T14:33:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>跟我一起学kotlin语法糖（三） 优雅的实现类和继承</title>
+        <pubTime>2017-07-02T14:13:53.000Z</pubTime>
+        
+        <tag>Kotlin语法糖</tag>
+         
+         
+           
+             
+              <breadCrumb title="Kotlin" url="http://laosiji.tech/categories/Kotlin/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Java-Pattern-quote/</loc>
-    <lastmod>2017-07-02T05:02:30.000Z</lastmod>
+    <lastmod>2017-07-02T08:37:06.000Z</lastmod>
     <data>
         <display>
         <title>Java字符串正则匹配避坑指南之一</title>
         <pubTime>2017-07-02T03:24:02.000Z</pubTime>
         
         <tag>Pattern</tag>
+         
+        <tag>避坑</tag>
          
          
            

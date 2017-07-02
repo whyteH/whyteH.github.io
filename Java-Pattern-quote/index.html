@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Pattern,">
+  <meta name="keywords" content="Pattern,避坑,">
 
 
 
@@ -85,13 +85,13 @@
 
 
 <meta name="description" content="最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题  1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**. 乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要">
-<meta name="keywords" content="Pattern">
+<meta name="keywords" content="Pattern,避坑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java字符串正则匹配避坑指南之一">
 <meta property="og:url" content="http://laosiji.tech/Java-Pattern-quote/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
 <meta property="og:description" content="最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题  1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**. 乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要">
-<meta property="og:updated_time" content="2017-07-02T05:02:30.000Z">
+<meta property="og:updated_time" content="2017-07-02T08:37:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java字符串正则匹配避坑指南之一">
 <meta name="twitter:description" content="最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题  1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**. 乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要">
@@ -440,7 +440,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index <span class="number">3</span> .**.</div></pre></td></tr></table></figure>
 <p>乍一看，正则语法错误。为什么会出现<strong>.*<em>.</em></strong>？<br>还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。<br>这时就需要用到Pattern.quote()，参照<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html#quote%28java.lang.String%29" target="_blank" rel="external">官网API</a>，有如下解释：</p>
 <blockquote>
-<p>Returns a literal pattern String for the specified String.<br>//简单翻译一下：返回一个指定字符串的字面量</p>
+<p>Returns a literal pattern String for the specified String.<br>简单翻译一下：返回一个指定字符串的字面量</p>
 </blockquote>
 <h2 id="Pattern-quote-的使用"><a href="#Pattern-quote-的使用" class="headerlink" title="Pattern.quote()的使用"></a>Pattern.quote()的使用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isMatch</span><span class="params">(String key, String content)</span> </span>&#123;</div><div class="line">    String quote = Pattern.quote(key);</div><div class="line">    System.out.println(quote);</div><div class="line">    String pattern = <span class="string">".*"</span> + quote + <span class="string">".*"</span>;</div><div class="line">    <span class="keyword">return</span> Pattern.matches(pattern, content);</div><div class="line">&#125;</div><div class="line"><span class="comment">//调用</span></div><div class="line">System.out.println(isMatch(<span class="string">"*"</span>, <span class="string">"21*4124"</span>));</div></pre></td></tr></table></figure>
 <p>输出结果为：</p>
@@ -476,6 +476,8 @@
         <div class="post-tags">
           
             <a href="/tags/Pattern/" rel="tag"># Pattern</a>
+          
+            <a href="/tags/避坑/" rel="tag"># 避坑</a>
           
         </div>
       
@@ -572,7 +574,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -594,7 +596,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
