@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://laosiji.tech/Kotlin-two/</loc>
+    <loc>http://laosiji.tech/Java-Pattern-quote/</loc>
     
-    <lastmod>2017-07-01T14:09:11.000Z</lastmod>
+    <lastmod>2017-07-02T04:17:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://laosiji.tech/Mac-skills/</loc>
+    
+    <lastmod>2017-07-02T04:15:33.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://laosiji.tech/Kotlin-one/</loc>
     
-    <lastmod>2017-06-29T16:09:29.000Z</lastmod>
+    <lastmod>2017-07-02T03:55:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://laosiji.tech/Kotlin-two/</loc>
+    
+    <lastmod>2017-07-01T14:09:11.000Z</lastmod>
     
   </url>
   

@@ -4,12 +4,54 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Kotlin-two/</loc>
-    <lastmod>2017-07-01T14:09:11.000Z</lastmod>
+    <loc>http://laosiji.tech/Java-Pattern-quote/</loc>
+    <lastmod>2017-07-02T04:17:12.000Z</lastmod>
     <data>
         <display>
-        <title>跟我一起学kotlin语法糖（二）——灵活的控制流表达式</title>
-        <pubTime>2017-06-28T12:47:13.000Z</pubTime>
+        <title>Java正则表达式Pattern.quote()方法使用及其详解</title>
+        <pubTime>2017-07-02T03:24:02.000Z</pubTime>
+        
+        <tag>Pattern</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://laosiji.tech/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Mac-skills/</loc>
+    <lastmod>2017-07-02T04:15:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac 技巧集锦</title>
+        <pubTime>2017-07-02T04:12:32.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>技巧</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://laosiji.tech/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Kotlin-one/</loc>
+    <lastmod>2017-07-02T03:55:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>跟我一起学kotlin语法糖（一）——变量及函数声明</title>
+        <pubTime>2017-06-28T11:25:07.000Z</pubTime>
         
         <tag>Kotlin语法糖</tag>
          
@@ -24,12 +66,12 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Kotlin-one/</loc>
-    <lastmod>2017-06-29T16:09:29.000Z</lastmod>
+    <loc>http://laosiji.tech/Kotlin-two/</loc>
+    <lastmod>2017-07-01T14:09:11.000Z</lastmod>
     <data>
         <display>
-        <title>学习kotlin语法糖（一）——变量及函数声明</title>
-        <pubTime>2017-06-28T11:25:07.000Z</pubTime>
+        <title>跟我一起学kotlin语法糖（二）——灵活的控制流表达式</title>
+        <pubTime>2017-06-28T12:47:13.000Z</pubTime>
         
         <tag>Kotlin语法糖</tag>
          
