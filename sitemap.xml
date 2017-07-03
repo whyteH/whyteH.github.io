@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://laosiji.tech/about/index.html</loc>
+    
+    <lastmod>2017-07-03T15:18:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://laosiji.tech/Kotlin-three/</loc>
     
     <lastmod>2017-07-03T04:57:56.000Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://laosiji.tech/books/index.html</loc>
     
     <lastmod>2017-06-06T15:50:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://laosiji.tech/about/index.html</loc>
-    
-    <lastmod>2017-06-06T15:46:37.000Z</lastmod>
     
   </url>
   
