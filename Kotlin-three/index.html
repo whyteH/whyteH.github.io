@@ -87,13 +87,13 @@
 <meta name="description" content="类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议  要么为继承而设计，并">
 <meta name="keywords" content="Kotlin语法糖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跟我一起学kotlin语法糖（三） 优雅的实现类和继承">
+<meta property="og:title" content="跟我一起学kotlin语法糖（三） 优雅的定义类和继承">
 <meta property="og:url" content="http://laosiji.tech/Kotlin-three/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
 <meta property="og:description" content="类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议  要么为继承而设计，并">
-<meta property="og:updated_time" content="2017-07-02T14:33:12.000Z">
+<meta property="og:updated_time" content="2017-07-03T04:51:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跟我一起学kotlin语法糖（三） 优雅的实现类和继承">
+<meta name="twitter:title" content="跟我一起学kotlin语法糖（三） 优雅的定义类和继承">
 <meta name="twitter:description" content="类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议  要么为继承而设计，并">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>跟我一起学kotlin语法糖（三） 优雅的实现类和继承 | Whyte's blogs</title>
+  <title>跟我一起学kotlin语法糖（三） 优雅的定义类和继承 | Whyte's blogs</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">跟我一起学kotlin语法糖（三） 优雅的实现类和继承</h2>
+          <h2 class="post-title" itemprop="name headline">跟我一起学kotlin语法糖（三） 优雅的定义类和继承</h2>
         
 
         <div class="post-meta">
@@ -377,7 +377,7 @@
 
           
           
-             <span id="/Kotlin-three/" class="leancloud_visitors" data-flag-title="跟我一起学kotlin语法糖（三） 优雅的实现类和继承">
+             <span id="/Kotlin-three/" class="leancloud_visitors" data-flag-title="跟我一起学kotlin语法糖（三） 优雅的定义类和继承">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -440,7 +440,7 @@
 <blockquote>
 <p>要么为继承而设计，并提供文档说明，要么就禁止继承。</p>
 </blockquote>
-<p>接下来和大家分享Kotlin中实现类和继承等相关语法糖。</p>
+<p>接下来和大家分享Kotlin中定义类和继承等相关语法糖。</p>
 <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>Kotlin中类的定义和Java一样都是用的关键词<strong>class</strong>，但是一个类中没有任何内容的话，可以去掉花括号。</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">a</span></span></div></pre></td></tr></table></figure>
 <h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>可以有一个<strong>主构造函数</strong>和一个或多个<strong>次构造函数</strong>。主构造函数是类头的一部分：跟在类名后面。</p>
