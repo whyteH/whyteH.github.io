@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关实现的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
+<meta name="description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
 <meta name="keywords" content="Kotlin语法糖">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跟我一起学Kotlin语法糖（四）——对象表达式和对象声明及数据类">
 <meta property="og:url" content="http://laosiji.tech/Kotlin-four/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关实现的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
-<meta property="og:updated_time" content="2017-07-04T15:19:11.000Z">
+<meta property="og:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
+<meta property="og:updated_time" content="2017-07-04T15:48:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跟我一起学Kotlin语法糖（四）——对象表达式和对象声明及数据类">
-<meta name="twitter:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关实现的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
+<meta name="twitter:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
 
 
 
@@ -425,7 +425,7 @@
       
 
       
-        <p>Kotlin中的匿名对象对应的是Java中的匿名内部类。<br>Kotlin中的数据类方便我们去保存数据。<br>接下来本文将和大家说一下，对象表达式和对象声明及数据类相关实现的语法糖。</p>
+        <p>Kotlin中的匿名对象对应的是Java中的匿名内部类。<br>Kotlin中的数据类方便我们去保存数据。<br>接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。</p>
 <h2 id="对象表达式和对象声明"><a href="#对象表达式和对象声明" class="headerlink" title="对象表达式和对象声明"></a>对象表达式和对象声明</h2><p>我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。</p>
 <ol>
 <li>对象表达式是在使用他们的地方立即执行（及初始化）的</li>
