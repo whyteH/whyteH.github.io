@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://laosiji.tech/Kotlin-four/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
 <meta property="og:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
-<meta property="og:updated_time" content="2017-07-04T15:48:04.000Z">
+<meta property="og:updated_time" content="2017-07-11T15:15:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跟我一起学Kotlin语法糖（四）——对象表达式和对象声明及数据类">
 <meta name="twitter:description" content="Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。  对象表达式是在使用他们的地方立即执行（及初始化）的 对">
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,262
+                  1,278
                 </span>
               
 
@@ -454,7 +454,7 @@
 <li>数据类不能是抽象、开放、密封或者内部的；</li>
 <li>（在1.1之前）数据类只能实现接口。</li>
 </ol>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> p = User(<span class="string">"Whyte"</span>, <span class="number">18</span>)</div><div class="line"></div><div class="line"><span class="comment">//调用</span></div><div class="line">println(p.name + <span class="string">" is "</span> + p.age)<span class="comment">//Whyte is 18</span></div><div class="line"></div><div class="line"><span class="comment">//也可以这样调用</span></div><div class="line"><span class="keyword">val</span> (name, age) = p</div><div class="line">println(name + <span class="string">" is "</span> + age)</div><div class="line"></div><div class="line">println(p)<span class="comment">//User(name=Whyte, age=18)</span></div></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//定义一个数据类</span></div><div class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">val</span> age: <span class="built_in">Int</span>)</div><div class="line"></div><div class="line"><span class="comment">//调用</span></div><div class="line"><span class="keyword">val</span> p = User(<span class="string">"Whyte"</span>, <span class="number">18</span>)</div><div class="line">println(p.name + <span class="string">" is "</span> + p.age)<span class="comment">//Whyte is 18</span></div><div class="line"></div><div class="line"><span class="comment">//也可以这样调用</span></div><div class="line"><span class="keyword">val</span> (name, age) = p</div><div class="line">println(name + <span class="string">" is "</span> + age)</div><div class="line"></div><div class="line">println(p)<span class="comment">//User(name=Whyte, age=18)</span></div></pre></td></tr></table></figure>
 <p>编译器自动从主构造函数中声明的所有属性生成以下成员：</p>
 <ol>
 <li>equals()／hashCode()</li>
