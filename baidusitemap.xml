@@ -4,14 +4,18 @@
 
     
   <url>
-    <loc>http://laosiji.tech/throttle-click/</loc>
-    <lastmod>2017-07-17T13:21:19.000Z</lastmod>
+    <loc>http://laosiji.tech/Throttle-click/</loc>
+    <lastmod>2017-07-17T13:28:11.000Z</lastmod>
     <data>
         <display>
         <title>解决按钮重复点击重复响应的问题</title>
         <pubTime>2017-07-17T13:18:02.000Z</pubTime>
         
-        <tag>-rxJava -rxBinding</tag>
+        <tag>rxJava</tag>
+         
+        <tag>rxBinding</tag>
+         
+        <tag>throttleFirst</tag>
          
          
            
