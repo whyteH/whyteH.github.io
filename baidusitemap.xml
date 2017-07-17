@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://laosiji.tech/throttle-click/</loc>
+    <lastmod>2017-07-17T13:21:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决按钮重复点击重复响应的问题</title>
+        <pubTime>2017-07-17T13:18:02.000Z</pubTime>
+        
+        <tag>-rxJava -rxBinding</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Kotlin-four/</loc>
     <lastmod>2017-07-11T15:15:13.000Z</lastmod>
     <data>
