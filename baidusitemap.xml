@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
+    <lastmod>2017-07-24T13:26:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>在一段文本中用正则匹配是否有手机号码</title>
+        <pubTime>2017-07-24T13:09:06.000Z</pubTime>
+        
+        <tag>负向零宽断言</tag>
+         
+         
+           
+             
+              <breadCrumb title="Regex" url="http://laosiji.tech/categories/Regex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Git-ignored-tracked/</loc>
+    <lastmod>2017-07-24T13:03:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>处理git无法忽略未提交的修改文件</title>
+        <pubTime>2017-07-24T13:01:56.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://laosiji.tech/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Throttle-click_view/</loc>
     <lastmod>2017-07-17T13:48:26.000Z</lastmod>
     <data>
