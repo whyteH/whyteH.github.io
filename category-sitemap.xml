@@ -50,7 +50,21 @@
 
     <url>
         <loc>http://laosiji.tech/categories/Android/</loc>
-        <lastmod>2017-07-17T13:28:11.000Z</lastmod>
+        <lastmod>2017-07-17T13:48:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/categories/Git/</loc>
+        <lastmod>2017-07-24T13:03:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/categories/Java-Regex/</loc>
+        <lastmod>2017-07-24T13:48:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
