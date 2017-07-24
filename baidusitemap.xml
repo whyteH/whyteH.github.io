@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
-    <lastmod>2017-07-24T13:53:29.000Z</lastmod>
+    <lastmod>2017-07-24T14:00:34.000Z</lastmod>
     <data>
         <display>
-        <title>在一段文本中用正则匹配是否有手机号码</title>
+        <title>用正则在一段文本中匹配出手机号码</title>
         <pubTime>2017-07-24T13:09:06.000Z</pubTime>
         
         <tag>负向零宽断言</tag>
