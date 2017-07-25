@@ -392,7 +392,7 @@
         
           
           TextView实现setMovementMethod方法首先得让TextView支持网页链接及话题点击，可自定义链接按下的背景颜色，让TextView支持链接点击需要实现setMovementMethod方法。具体实现如下：
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475private static class LocalLinkMovementMethod extends LinkMovementMethod &#123;
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -566,7 +566,7 @@
           最近在项目中遇到一个这样的需求：在一段文本中匹配出手机号码，并高亮显示，用于点击拨打电话，发送短信等。查阅了正则表达式的相关资料，最终找到了解决方案。
 负向零宽断言零宽度负预测先行断言断言此位置的后面不能匹配表达式
 零宽度负回顾后发断言断言此位置的前面不能匹配表达式
-代码实现123456789101112131415/** * 零宽度负预测先行断言 (?!exp) * 零宽度负回顾后发断言 (?\
+代码实现123456789101112131415/** * 零宽度负预测先行断言 (?!exp) * 零宽度负回顾后发断言 (?\&lt;!exp) * 匹配手机号码的前面和后面都不能为数字 * @param source 传入的文本 * @return */public static boolean isMatchPhone(String source) &#123;    Pattern 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -738,6 +738,10 @@
         
           
           在我们使用git作为代码管理器的时候，有时候会遇到文件没有在gitignore中添加忽略就提交了，这时可能在其他地方把代码clone下来，而且修改了里面的内容，才添加到gitignore里面，push代码后，发现无法添加到gitignore。再次修改文件内容又可以commit。这时候文件右侧会提示 ignored, tracked with git（我用的编辑器是Intellij，其他编辑器未知）
+解决方法处理指定单个文件
+123git rm --cached &lt;文件的名称&gt; 如：git rm --cached kotlinc.xml
+批量处理文件夹里面的问题
+12git rm -r --cached &lt;文件夹的名称&gt;如：git rm
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -910,7 +914,9 @@
           
           我们在项目中，按钮点击跳转页面或者执行某个事件时，有时候需要防止用户重复点击，防止重复执行某个事件或接口调用等。这时候就需要用到JakeWharton大神的RxBinding
 使用引用依赖包
-123compile 'io.reactivex.rxjava2:rxjava:2.1.1'//这个是基于上面的rxjava的compile 'com.jakewharton.rxbinding2:rxbin
+123compile 'io.reactivex.rxjava2:rxjava:2.1.1'//这个是基于上面的rxjava的compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+一个普通的View点击
+12345678RxView.clicks(btnClick).throttleFirst(1, TimeUnit.SECONDS).subscribe(        new Consumer&lt;Object&g
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1085,7 +1091,7 @@
 委托模式是软件设计模式中的一项基本技巧。有两个对象参与处理同一个请求，接受请求的对象将请求委托给另一个对象来处理。这就是委托。 委托模式是一项基本技巧，许多其他的模式，如状态模式、策略模式、访问者模式本质上是在更特殊的场合采用了委托模式。可以用委托模式来替代传统的继承。
 
 委托类先来看一下，在我们熟悉的Java代码中常用的委托模式是怎么去实现的，以便于下一步，我们去了解Kotlin中的委托。
-1
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748interface I &#123;    void f();&#125;class L im
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1258,8 +1264,9 @@
           
           最近在看《军师联盟》，虽然出品方说是架空历史，但是有些还是属于真实的历史场景。至少没有过于政治正确的把曹操描写大奸大恶。反而有点在帮曹操说话，例如后世应该比较痛恨曹操杀了华佗，《三国演义》中好像没有表现出曹操的悔恨之意，而这表现了，曹冲因病早逝，曹操说了那么句，“孤后悔杀了那华佗呀”。虽然是因为私心，但还是表现了那么一点。看了剧，自己也有感而发写上那么一小段：
 
-爱才之心，唯曹公不能比也。用忠臣得
-          ...
+爱才之心，唯曹公不能比也。用忠臣得以平天下，用谋士得以治天下。忠臣易得，谋臣难得，呜呼哀哉奉孝，天下未定，斯人已逝矣。
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/About-cao-cao/#more" rel="contents">
@@ -1430,7 +1437,7 @@
         
           
           记录一小段代码，免得用到的时候，重复造轮子
-123456789101112131415161718public static boolean isToDay(long time) &#123;    long now = System.currentTimeMillis();    SimpleDateFormat temp = new SimpleDateFormat("yyyy-MM");  
+123456789101112131415161718public static boolean isToDay(long time) &#123;    long now = System.currentTimeMillis();    SimpleDateFormat temp = new SimpleDateFormat("yyyy-MM");    //先判断年月是否相等，再判断天    return temp.format(new Date(time)).equals(temp.format(new Date(now))) &amp;&amp; (getDay(now) == ge(time));&#12
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1605,7 +1612,11 @@
 对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。
 
 对象表达式是在使用他们的地方立即执行（及初始化）的
-对
+对象声明是在第一次被访问到时延迟初始化的
+伴生对象的初始化是在相应的类被加载（解析）时，与Java静态初始化器的语义相匹配
+
+对象表达式先写一个Java中的匿名内部类，好和Kotlin中对象表达式作比较
+12345678910111213141516//声明一个抽象类
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1778,7 +1789,12 @@
           
           类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议
 
-要么为继承而设计，并
+要么为继承而设计，并提供文档说明，要么就禁止继承。
+
+接下来和大家分享Kotlin中定义类和继承等相关语法糖。
+类Kotlin中类的定义和Java一样都是用的关键词class，但是一个类中没有任何内容的话，可以去掉花括号。
+1class a
+构造函数可以有一个主构造函数和一个或多个次构
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1953,7 +1969,8 @@
 1-bash: ls :command not found
 在terminal里面输入如下命令，这样命令暂时可以用了。
 1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
-赶紧用o
+赶紧用open -e ~/.bash_profile在文本编辑器里面打开.bash_profile文件。更改PATH环境变量设置，添加上这一行。
+1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X
           ...
           <!--noindex-->
           <div class="post-button text-center">
