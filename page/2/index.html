@@ -395,9 +395,7 @@
 1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**.
 乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要用到Pattern.quote()，参照官网API，有如下解释：
 
-Returns a literal pattern String for the specified String.简单翻译一下：返回一个指定字符串的字面量
-
-Pattern.quote()的使用1
+Returns a literal pattern String for the specified String.简单翻译一下：返
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -572,7 +570,7 @@ Pattern.quote()的使用1
 If表达式在 Kotlin 中，if是一个表达式，它可以返回一个值。 因此就不需要三元运算符（条件 ? 然后 : 否则）
 1234val a: Int = 1val b: Int = 3val max = if (a &gt; b) a else bprintln(max)
 if的分支可以是代码块，最后的表达式作为该块的值并返回。注意：要像三元表达式一样的用法，则必须要else分支
-12345678val max1 = if (a &gt; b) &#123;    print("Choose 
+12345678val max1 = if (a
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -748,7 +746,7 @@ if的分支可以是代码块，最后的表达式作为该块的值并返回。
 一次赋值（只读）的局部变量：val
 可变变量：var
 
-123456789101112fun main(args: Array&lt;String&gt;) &#123;    val a: Int = 1  // 立即赋值    val b = 2   // 自动推
+123456789101112fun main(args: Array&lt;String&gt;) &#123;    val a: Int =
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -925,7 +923,7 @@ if的分支可以是代码块，最后的表达式作为该块的值并返回。
 getFragment(Bundle bundle, String key)
 putFragment(Bundle bundle, String key, Fragment fragment)
 
-抽象方法getFragment实现类下的源码为：123456public void putFragment(Bundle bundle, String key, Fragmen
+抽象方法getFragment实现类下的源码为：123456public void putFragment(B
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1106,10 +1104,7 @@ sudo apt-get install openssh-server
 
 这时，有可能会出现一个错误，提示如下：
 
-无法获得锁 /var/lib/apt/lists/lock - open (11 资源暂时不可用)解决办法：把lock的文件强行删掉，运行如下命令：sudo rm /var/lib/apt/lists/lock
-
-
-安装完
+无法获得锁 /var/lib/apt/lists/lock - open (11 资源暂时不可用)解决办法：把lock的文件强行删掉，运行如下命令：sudo
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1281,7 +1276,7 @@ sudo apt-get install openssh-server
         
           
           方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDirectory())));
-可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，会出现如下的异常：Permission Denial: not a
+可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1457,7 +1452,7 @@ sudo apt-get install openssh-server
 有问题当然是要解决的，接下来是见证奇迹的时刻了
 解决
 先找到Android Studio 安卓目录中的idea.properties文件。如图： 
-打开这个文件，修改idea.max.intellisense.filesize的值。如图：简单的解释一下，这个设定的意思。这个属性对编辑器的文件数量会进行一定的限制，以免编辑器变慢和需要消耗系统更多的内存，你可以删除这个属性
+打开这个文件，修改idea.max.intellisense.filesize的值。如图：简单的解释一下，这个设定的意思。这个属性对编辑器的文件数量会进行一定
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1630,7 +1625,7 @@ sudo apt-get install openssh-server
           
           前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图
 
-代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标的显示位置，false为显示编辑框在外面，true为显示在编辑框里
+代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1801,7 +1796,7 @@ sudo apt-get install openssh-server
       
         
           
-          今天是二零一七年六月一日，儿童节，我也想过个节。今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。最近这两年互联网上的过节气氛越来越浓烈，当然不乏一些商家借着过节做营销，人们怀旧情绪好像越来越浓烈了。年后换了份新的工作，来这公司也快两个月了（还有九天），体会到了稍微上点规模的公司，管理上、工作效率上所呈现的问题。也见识到了，传说中经过N个人的开发维护，产生了有点难维护的代码。当然在这里也有一些各方面都很优秀的同事，希望自己能好好适应新的环境，发挥出该有的能力。今年也给自己定个小目标，希望每个
+          今天是二零一七年六月一日，儿童节，我也想过个节。今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。最近这两年互联网上的过节气氛越来越浓烈，当然不乏一些商家借着过节做营销，人们怀旧情绪好像越来越浓烈了。年后换了份新的工作，来这公司也快两个月了（还有九天），体会到了稍微上点规模的公司，管理上、工作效率上所呈现的问题。也见识到了，传说中经过N个人的开发维护，产生了有点难维护的代码。当然在这里也有一些各方面都很优秀的同事，希望自己能好
           ...
           <!--noindex-->
           <div class="post-button text-center">
