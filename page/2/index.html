@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  272
+                  275
                 </span>
               
 
@@ -392,10 +392,10 @@
         
           
           最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题 
-Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**.
+1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**.
 乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要用到Pattern.quote()，参照官网API，有如下解释：
 
-Returns a literal pattern String for the specified String.简单翻译一下：返回
+Returns a literal pattern String for the specified String.简单翻译一下：返
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -530,7 +530,7 @@ Returns a literal pattern String for the specified String.简单翻译一下：�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  599
+                  612
                 </span>
               
 
@@ -568,9 +568,9 @@ Returns a literal pattern String for the specified String.简单翻译一下：�
           
           Kotlin控制流表达式，去掉了Java中的switch，加了when表达式。if表达式比Java功能更多、更灵活。when表达式替换switch也更灵活、更高级。
 If表达式在 Kotlin 中，if是一个表达式，它可以返回一个值。 因此就不需要三元运算符（条件 ? 然后 : 否则）
-val a: Int = 1val b: Int = 3val max = if (a &gt; b) a else bprintln(max)
+1234val a: Int = 1val b: Int = 3val max = if (a &gt; b) a else bprintln(max)
 if的分支可以是代码块，最后的表达式作为该块的值并返回。注意：要像三元表达式一样的用法，则必须要else分支
-val max1 = if (a &gt; b) &#1
+12345678val max1 = if (a
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -705,7 +705,7 @@ val max1 = if (a &gt; b) &#1
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  631
+                  639
                 </span>
               
 
@@ -746,7 +746,7 @@ val max1 = if (a &gt; b) &#1
 一次赋值（只读）的局部变量：val
 可变变量：var
 
-fun main(args: Array&lt;String&gt;) &#123;    val a: Int = 1  // 立即赋值    
+123456789101112fun main(args: Array&lt;String&gt;) &#123;    val a: Int =
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -881,7 +881,7 @@ fun main(args: Array&lt;String&gt;) &#123;    val a: Int = 1  // 立即赋值
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  291
+                  293
                 </span>
               
 
@@ -923,7 +923,7 @@ fun main(args: Array&lt;String&gt;) &#123;    val a: Int = 1  // 立即赋值
 getFragment(Bundle bundle, String key)
 putFragment(Bundle bundle, String key, Fragment fragment)
 
-抽象方法getFragment实现类下的源码为：public void putFragment(Bundle 
+抽象方法getFragment实现类下的源码为：123456public void putFragment(B
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1239,7 +1239,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  303
+                  305
                 </span>
               
 
@@ -1275,8 +1275,8 @@ sudo apt-get install openssh-server
       
         
           
-          方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDirectory())));
-可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，会
+          方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDirectory())));
+可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1587,7 +1587,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  162
+                  163
                 </span>
               
 
@@ -1625,7 +1625,7 @@ sudo apt-get install openssh-server
           
           前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图
 
-代码实现getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标的显示位置，false为显
+代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标
           ...
           <!--noindex-->
           <div class="post-button text-center">

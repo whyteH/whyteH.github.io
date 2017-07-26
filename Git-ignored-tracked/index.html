@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  186
+                  188
                 </span>
               
 
@@ -391,9 +391,9 @@
       
         <p>在我们使用git作为代码管理器的时候，有时候会遇到文件没有在<strong>gitignore</strong>中添加忽略就提交了，这时可能在其他地方把代码clone下来，而且修改了里面的内容，才添加到<strong>gitignore</strong>里面，push代码后，发现无法添加到<strong>gitignore</strong>。再次修改文件内容又可以commit。<br>这时候文件右侧会提示 <strong>ignored, tracked with git</strong>（我用的编辑器是Intellij，其他编辑器未知）</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>处理指定单个文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">git rm --cached &lt;文件的名称&gt; </div><div class="line"></div><div class="line">如：git rm --cached kotlinc.xml</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm --cached &lt;文件的名称&gt; </div><div class="line"></div><div class="line">如：git rm --cached kotlinc.xml</div></pre></td></tr></table></figure>
 <p>批量处理文件夹里面的问题</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">git rm -r --cached &lt;文件夹的名称&gt;</div><div class="line">如：git rm -r --cached .idea</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git rm -r --cached &lt;文件夹的名称&gt;</div><div class="line">如：git rm -r --cached .idea</div></pre></td></tr></table></figure>
 <p>问题完美解决<br><a href="https://stackoverflow.com/questions/936249/how-to-stop-tracking-and-ignore-changes-to-a-file-in-git" target="_blank" rel="external">参考地址</a></p>
       
     </div>
