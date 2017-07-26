@@ -4,11 +4,51 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
-    <lastmod>2017-07-25T16:13:33.000Z</lastmod>
+    <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
+    <lastmod>2017-07-26T11:24:38.000Z</lastmod>
     <data>
         <display>
-        <title>Android TextView 仿微博话题及网页链接效果</title>
+        <title>在一段文本中用正则匹配是否有手机号码</title>
+        <pubTime>2017-07-24T13:09:06.000Z</pubTime>
+        
+        <tag>负向零宽断言</tag>
+         
+         
+           
+             
+              <breadCrumb title="Regex" url="http://laosiji.tech/categories/Regex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Save-state-for-fragment/</loc>
+    <lastmod>2017-07-26T11:24:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Activity销毁时Tablayout+Viewpager+Fragment状态保存</title>
+        <pubTime>2017-06-22T11:13:19.000Z</pubTime>
+        
+        <tag>Fragment</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
+    <lastmod>2017-07-26T11:22:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android 仿微博话题及网页链接效果</title>
         <pubTime>2017-07-25T15:57:04.000Z</pubTime>
         
         <tag>TextView</tag>
@@ -17,6 +57,70 @@
            
              
               <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Toolbar-Not-Search-Icon/</loc>
+    <lastmod>2017-07-26T11:15:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Toolbar SearchView在代码中去掉左边搜索图标</title>
+        <pubTime>2017-06-05T15:01:37.000Z</pubTime>
+        
+        <tag>Toolbar</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/R-lose-but-can-run-project/</loc>
+    <lastmod>2017-07-26T11:13:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>R文件丢失，到处报红，但项目仍可以跑起来</title>
+        <pubTime>2017-06-12T13:32:00.000Z</pubTime>
+        
+        <tag>Android Studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Ubuntu-and-win-transfer/</loc>
+    <lastmod>2017-07-26T11:12:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>虚拟机中的Ubuntu与主机Win交互</title>
+        <pubTime>2017-06-15T14:30:11.000Z</pubTime>
+        
+        <tag>Xshell</tag>
+         
+        <tag>Xftp</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ubuntu" url="http://laosiji.tech/categories/Ubuntu/"/>
           
         </display>
     </data>
@@ -61,26 +165,6 @@
            
              
               <breadCrumb title="Git" url="http://laosiji.tech/categories/Git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
-    <lastmod>2017-07-24T16:03:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>在一段文本中用正则匹配是否有手机号码</title>
-        <pubTime>2017-07-24T13:09:06.000Z</pubTime>
-        
-        <tag>负向零宽断言</tag>
-         
-         
-           
-             
-              <breadCrumb title="Regex" url="http://laosiji.tech/categories/Regex/"/>
           
         </display>
     </data>
@@ -273,50 +357,6 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Save-state-for-fragment/</loc>
-    <lastmod>2017-06-22T13:45:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>Activity销毁时Tablayout+Viewpager+Fragment状态保存</title>
-        <pubTime>2017-06-22T11:13:19.000Z</pubTime>
-        
-        <tag>Fragment</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Ubuntu-and-win-transfer/</loc>
-    <lastmod>2017-06-15T15:11:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>虚拟机中的Ubuntu与主机Win交互</title>
-        <pubTime>2017-06-15T14:30:11.000Z</pubTime>
-        
-        <tag>Xshell</tag>
-         
-        <tag>Xftp</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ubuntu" url="http://laosiji.tech/categories/Ubuntu/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://laosiji.tech/Android-media-data-update/</loc>
     <lastmod>2017-06-14T14:33:16.000Z</lastmod>
     <data>
@@ -325,26 +365,6 @@
         <pubTime>2017-06-14T14:27:20.000Z</pubTime>
         
         <tag>MediaScannerConnection</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/R-lose-but-can-run-project/</loc>
-    <lastmod>2017-06-12T13:38:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>R文件丢失，到处报红，但项目仍可以跑起来</title>
-        <pubTime>2017-06-12T13:32:00.000Z</pubTime>
-        
-        <tag>Android Studio</tag>
          
          
            
@@ -371,26 +391,6 @@
            
              
               <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Toolbar-Not-Search-Icon/</loc>
-    <lastmod>2017-06-05T15:09:27.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Toolbar SearchView在代码中去掉左边搜索图标</title>
-        <pubTime>2017-06-05T15:01:37.000Z</pubTime>
-        
-        <tag>Toolbar</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
           
         </display>
     </data>
