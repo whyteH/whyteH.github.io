@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 1-bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用o">
+<meta name="description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 -bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用ope">
 <meta name="keywords" content="Mac,技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 技巧集锦">
 <meta property="og:url" content="http://laosiji.tech/Mac-skills/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 1-bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用o">
+<meta property="og:description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 -bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用ope">
 <meta property="og:updated_time" content="2017-07-02T04:15:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 技巧集锦">
-<meta name="twitter:description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 1-bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用o">
+<meta name="twitter:description" content="Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。 -bash: ls :command not found 在terminal里面输入如下命令，这样命令暂时可以用了。 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin 赶紧用ope">
 
 
 
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  197
+                  194
                 </span>
               
 
@@ -390,11 +390,11 @@
 
       
         <h2 id="Mac-OS-X-bash-基本命令失效后的修复"><a href="#Mac-OS-X-bash-基本命令失效后的修复" class="headerlink" title="Mac OS X -bash 基本命令失效后的修复"></a>Mac OS X -bash 基本命令失效后的修复</h2><p>具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-bash: ls :command not found</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">-bash: ls :command not found</div></pre></td></tr></table></figure>
 <p>在terminal里面输入如下命令，这样命令暂时可以用了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin</div></pre></td></tr></table></figure>
 <p>赶紧用open -e ~/.bash_profile在文本编辑器里面打开.bash_profile文件。<br>更改PATH环境变量设置，添加上这一行。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><div class="line">export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11</div></pre></td></tr></table></figure>
 <p>保存问题解决</p>
 <h2 id="Mac-显示隐藏文件"><a href="#Mac-显示隐藏文件" class="headerlink" title="Mac 显示隐藏文件"></a>Mac 显示隐藏文件</h2><p>Command+Shift+. 可以显示隐藏文件、文件夹，再按一次，恢复隐藏；<br>Finder下使用Command+Shift+G 可以前往任何文件夹，包括隐藏文件夹。<br><a href="https://www.zhihu.com/question/24635640" target="_blank" rel="external">参考</a></p>
 <p>未完，待续…</p>
