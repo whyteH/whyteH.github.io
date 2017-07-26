@@ -88,17 +88,25 @@
 
 
 
-<meta name="description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/VirtualBox_network.png-1&amp;quot;/&amp;gt;&amp;lt;/p">
+<meta name="description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图  安装SSH Server 利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：  sudo apt-get install openssh-server">
 <meta name="keywords" content="Xshell,Xftp,Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚拟机中的Ubuntu与主机Win交互">
 <meta property="og:url" content="http://laosiji.tech/Ubuntu-and-win-transfer/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/VirtualBox_network.png-1&amp;quot;/&amp;gt;&amp;lt;/p">
+<meta property="og:description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图  安装SSH Server 利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：  sudo apt-get install openssh-server">
+<meta property="og:image" content="http://image.readtalk.me/VirtualBox_network.png-1">
+<meta property="og:image" content="http://image.readtalk.me/Xshell5.png-1">
+<meta property="og:image" content="http://image.readtalk.me/Ubuntu_ip.png-1">
+<meta property="og:image" content="http://image.readtalk.me/XshellNew.png-1">
+<meta property="og:image" content="http://image.readtalk.me/SSH_username.png-1">
+<meta property="og:image" content="http://image.readtalk.me/SSH_pwd.png-1">
+<meta property="og:image" content="http://image.readtalk.me/xftp_transfer.png-1">
 <meta property="og:updated_time" content="2017-07-26T11:12:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机中的Ubuntu与主机Win交互">
-<meta name="twitter:description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/VirtualBox_network.png-1&amp;quot;/&amp;gt;&amp;lt;/p">
+<meta name="twitter:description" content="环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图  安装SSH Server 利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：  sudo apt-get install openssh-server">
+<meta name="twitter:image" content="http://image.readtalk.me/VirtualBox_network.png-1">
 
 
 
@@ -355,7 +363,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  630
+                  525
                 </span>
               
 
@@ -371,7 +379,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -390,7 +398,7 @@
 
       
         <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>虚拟机：<strong>VirtrualBox+Ubuntu16.04</strong>，主机：<strong>Windows10</strong><br>VirtrualBox网络连接方式选择<strong>“桥接网卡”</strong>，如图</p>
-<p>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/VirtualBox_network.png-1&quot;/&gt;&lt;/p&gt;</p>
+<p></p><p style="text-align:center"><img src="http://image.readtalk.me/VirtualBox_network.png-1"></p><p></p>
 <h2 id="安装SSH-Server"><a href="#安装SSH-Server" class="headerlink" title="安装SSH Server"></a>安装SSH Server</h2><ol>
 <li><p>利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：</p>
 <blockquote>
@@ -410,11 +418,11 @@
 </ol>
 <h2 id="Win-安装Xshell"><a href="#Win-安装Xshell" class="headerlink" title="Win 安装Xshell"></a>Win 安装Xshell</h2><ol>
 <li>可以自行百度与谷歌搜索Xshell，安装最新版本，目前我是用的版本为Xshell5。下载后在安装时选择家庭/学校免费版即可。Xshell是使用命令行操作虚拟机中的Ubuntu。</li>
-<li>安装成功后，运行会出现一个会话窗口：<br>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/Xshell5.png-1&quot;/&gt;&lt;/p&gt;</li>
-<li>获取虚拟机中Ubuntu的ip地址，待会有用：<br> &lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/Ubuntu_ip.png-1&quot;/&gt;&lt;/p&gt;</li>
-<li>点击左边新建，新建会话属性，协议选择SSH，主机填写上一步获取的ip地址<br>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/XshellNew.png-1&quot;/&gt;&lt;/p&gt;</li>
-<li>填写完后，点击确定，弹出输入用户名，此用户名为Ubuntu登陆使用的用户名，<strong>切记大小写敏感</strong><br> &lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/SSH_username.png-1&quot;/&gt;&lt;/p&gt;</li>
-<li>填写完用户名之后，点确定弹出输入密码<br>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/SSH_pwd.png-1&quot;/&gt;&lt;/p&gt;</li>
+<li>安装成功后，运行会出现一个会话窗口：<br><p style="text-align:center"><img src="http://image.readtalk.me/Xshell5.png-1"></p></li>
+<li>获取虚拟机中Ubuntu的ip地址，待会有用：<br> <p style="text-align:center"><img src="http://image.readtalk.me/Ubuntu_ip.png-1"></p></li>
+<li>点击左边新建，新建会话属性，协议选择SSH，主机填写上一步获取的ip地址<br><p style="text-align:center"><img src="http://image.readtalk.me/XshellNew.png-1"></p></li>
+<li>填写完后，点击确定，弹出输入用户名，此用户名为Ubuntu登陆使用的用户名，<strong>切记大小写敏感</strong><br> <p style="text-align:center"><img src="http://image.readtalk.me/SSH_username.png-1"></p></li>
+<li>填写完用户名之后，点确定弹出输入密码<br><p style="text-align:center"><img src="http://image.readtalk.me/SSH_pwd.png-1"></p></li>
 <li><p>填写完密码后，点击确定即进行连接，如下所示，表示连接成功</p>
 <blockquote>
 <p>Last login: Thu Jun 15 11:36:21 2017 from 192.168.1.143<br>whyte@whyte-VirtualBox:~$</p>
@@ -426,7 +434,7 @@
 <h2 id="Win-安装Xftp"><a href="#Win-安装Xftp" class="headerlink" title="Win 安装Xftp"></a>Win 安装Xftp</h2><ol>
 <li>可以自行百度与谷歌搜索Xftp，安装最新版本，目前我是用的版本为Xftp5。下载后在安装时选择家庭/学校免费版即可。Xftp是用于与虚拟机中的Ubuntu传输文件。</li>
 <li>Xftp与Xshell连接虚拟机方式类似，唯一的不同是协议，这里的协议选择<strong>SFTP</strong>，其他基本类似，就不再赘述了。</li>
-<li>这样就可以很愉快的和虚拟机传输文件了。如图：<br>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/xftp_transfer.png-1&quot;/&gt;&lt;/p&gt;</li>
+<li>这样就可以很愉快的和虚拟机传输文件了。如图：<br><p style="text-align:center"><img src="http://image.readtalk.me/xftp_transfer.png-1"></p></li>
 </ol>
       
     </div>
