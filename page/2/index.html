@@ -391,18 +391,19 @@
       
         
           
-            <p>最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index <span class="number">3</span> .**.</div></pre></td></tr></table></figure>
-<p>乍一看，正则语法错误。为什么会出现<strong>.*<em>.</em></strong>？<br>还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。<br>这时就需要用到Pattern.quote()，参照<a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html#quote%28java.lang.String%29" target="_blank" rel="external">官网API</a>，有如下解释：</p>
-<blockquote>
-<p>Returns a literal pattern String for the specified String.<br>简单翻译一下：返回一个指定字符串的字面量</p>
-</blockquote>
-<h2 id="Pattern-quote-的使用"><a href="#Pattern-quote-的使用" class="headerlink" title="Pattern.quote()的使用"></a>Pattern.quote()的使用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isMatch</span><span class="params">(String key, String content)</span> </span>&#123;</div><div class="line">    String quote = Pattern.quote(key);</div><div class="line">    System.out.println(quote);</div><div class="line">    String pattern = <span class="string">".*"</span> + quote + <span class="string">".*"</span>;</div><div class="line">    <span class="keyword">return</span> Pattern.matches(pattern, content);</div><div class="line">&#125;</div><div class="line"><span class="comment">//调用</span></div><div class="line">System.out.println(isMatch(<span class="string">"*"</span>, <span class="string">"21*4124"</span>));</div></pre></td></tr></table></figure>
-<p>输出结果为：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\Q*\E</div><div class="line">true</div></pre></td></tr></table></figure>
-<p>这样把本来是正则表达式的<strong>“*”</strong>转换成字面量（没有任何意义）的字符串<br>\Q 代表字面量的开始<br>\E 代表字面量的结束</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这是项目开发过程中遇到的一些极端问题，重要的是在平时知识的积累，就不会出现类似的错误。</p>
-          
+          最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题 
+1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**.
+乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要用到Pattern.quote()，参照官网API，有如下解释：
+
+Returns a literal pattern String for the specified String.简单翻译一下：返
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Java-Pattern-quote/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -565,35 +566,19 @@
       
         
           
-            <p>Kotlin控制流表达式，去掉了Java中的switch，加了when表达式。<br>if表达式比Java功能更多、更灵活。<br>when表达式替换switch也更灵活、更高级。</p>
-<h2 id="If表达式"><a href="#If表达式" class="headerlink" title="If表达式"></a>If表达式</h2><p>在 Kotlin 中，<strong>if</strong>是一个表达式，它可以返回一个值。 因此就不需要三元运算符（条件 ? 然后 : 否则）</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> a: <span class="built_in">Int</span> = <span class="number">1</span></div><div class="line"><span class="keyword">val</span> b: <span class="built_in">Int</span> = <span class="number">3</span></div><div class="line"><span class="keyword">val</span> max = <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span> b</div><div class="line">println(max)</div></pre></td></tr></table></figure>
-<p>if的分支可以是代码块，最后的表达式作为该块的值并返回。注意：<strong>要像三元表达式一样的用法，则必须要else分支</strong></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> max1 = <span class="keyword">if</span> (a &gt; b) &#123;</div><div class="line">    print(<span class="string">"Choose a"</span>)</div><div class="line">    a</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    print(<span class="string">"Choose b"</span>)</div><div class="line">    b</div><div class="line">&#125;</div><div class="line">println(max1)</div></pre></td></tr></table></figure>
-<p>当然也可以做一个普通的<strong>if</strong>表达式</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (a &gt; b) &#123;</div><div class="line">    print(<span class="string">"Choose a"</span>)</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    print(<span class="string">"Choose b"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="When-表达式"><a href="#When-表达式" class="headerlink" title="When 表达式"></a>When 表达式</h2><p>多了一个Java没有的表达，但是这个很像switch，但比switch灵活、高级</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> x: <span class="built_in">Int</span> = <span class="number">2</span></div><div class="line"><span class="keyword">when</span> (x) &#123;</div><div class="line">    <span class="number">1</span> -&gt; println(<span class="string">"x == 1"</span>)</div><div class="line">    <span class="number">2</span> -&gt; println(<span class="string">"x == 2"</span>)</div><div class="line">    <span class="keyword">else</span> -&gt; &#123; <span class="comment">// 注意这个,像switch的default</span></div><div class="line">        println(<span class="string">"x is neither 1 nor 2"</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>也可以像if语句一样作为一个表达式使用，在分支块最后返回值，<strong>这时也是必须有else分支</strong></p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> s = <span class="keyword">when</span> (x) &#123;</div><div class="line">    <span class="number">1</span> -&gt; &#123;</div><div class="line">        println(<span class="string">"x == 1"</span>)</div><div class="line">        <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    <span class="number">2</span> -&gt; &#123;</div><div class="line">        println(<span class="string">"x == 2"</span>)</div><div class="line">        <span class="number">2</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> -&gt; &#123;</div><div class="line">        println(<span class="string">"x is neither 1 nor 2"</span>)</div><div class="line">        <span class="number">3</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">println(s)</div></pre></td></tr></table></figure>
-<p>一个分支满足多个条件时，用<strong>逗号</strong>分隔</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">when</span> (x) &#123;</div><div class="line">    <span class="number">0</span>, <span class="number">1</span> -&gt; println(<span class="string">"x == 0 or x == 1"</span>)</div><div class="line">    <span class="keyword">else</span> -&gt; println(<span class="string">"otherwise"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>可以用任意表达式（而不只是常量）作为分支条件</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> g: String = <span class="string">"1"</span></div><div class="line"><span class="keyword">when</span> (x) &#123;</div><div class="line">    parseInt(g) -&gt; println(<span class="string">"s encodes x"</span>)</div><div class="line">    <span class="keyword">else</span> -&gt; println(<span class="string">"s does not encode x"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>可以检测一个值在（in）或者不在（!in）一个区间或者集合中</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> validNumbers: Array&lt;<span class="built_in">Int</span>&gt; = arrayOf(<span class="number">30</span>, <span class="number">5</span>)</div><div class="line"><span class="keyword">when</span> (x) &#123;</div><div class="line">    <span class="keyword">in</span> <span class="number">1.</span><span class="number">.10</span> -&gt; println(<span class="string">"x is in the range"</span>)</div><div class="line">    <span class="keyword">in</span> validNumbers -&gt; println(<span class="string">"x is valid"</span>)</div><div class="line">    !<span class="keyword">in</span> <span class="number">10.</span><span class="number">.20</span> -&gt; println(<span class="string">"x is outside the range"</span>)</div><div class="line">    <span class="keyword">else</span> -&gt; println(<span class="string">"none of the above"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>检测一个值是（is）或者不是（!is）一个特定类型的值</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">hasStr</span><span class="params">(v: <span class="type">Any</span>)</span></span> = <span class="keyword">when</span> (v) &#123;</div><div class="line">    !<span class="keyword">is</span> String -&gt; <span class="literal">true</span></div><div class="line">    <span class="keyword">else</span> -&gt; <span class="literal">false</span></div><div class="line">&#125;</div><div class="line">println(hasStr(<span class="string">"1"</span>))</div></pre></td></tr></table></figure>
-<h2 id="For-循环"><a href="#For-循环" class="headerlink" title="For 循环"></a>For 循环</h2><p>通过索引遍历一个数组或者一个 list</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> array = arrayOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> array.indices) &#123;</div><div class="line">    print(array[i])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>还可以这样，从0到10升序遍历</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0.</span><span class="number">.10</span>)</div><div class="line">    println(<span class="string">"a:<span class="subst">$i</span>"</span>)</div></pre></td></tr></table></figure>
-<p>降序遍历至指定的数，如下降序遍历到3截止</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">10</span> downTo <span class="number">3</span>)</div><div class="line">    println(<span class="string">"b:<span class="subst">$i</span>"</span>)</div></pre></td></tr></table></figure>
-<p>用库函数<strong>withIndex</strong>访问索引和对应的值：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> ((index, value) <span class="keyword">in</span> array.withIndex()) &#123;</div><div class="line">    println(<span class="string">"the element at <span class="subst">$index</span> is <span class="subst">$value</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>其他用法和Java的用法类似。<br>while 和 do..while 也没有特殊的语法糖</p>
-          
+          Kotlin控制流表达式，去掉了Java中的switch，加了when表达式。if表达式比Java功能更多、更灵活。when表达式替换switch也更灵活、更高级。
+If表达式在 Kotlin 中，if是一个表达式，它可以返回一个值。 因此就不需要三元运算符（条件 ? 然后 : 否则）
+1234val a: Int = 1val b: Int = 3val max = if (a &gt; b) a else bprintln(max)
+if的分支可以是代码块，最后的表达式作为该块的值并返回。注意：要像三元表达式一样的用法，则必须要else分支
+12345678val max1 = if (a
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Kotlin-two/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -756,27 +741,20 @@
       
         
           
-            <p>Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。<br>Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。<br>由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。</p>
-<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><ol>
-<li>一次赋值（只读）的局部变量：<strong>val</strong></li>
-<li>可变变量：<strong>var</strong></li>
-</ol>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> a: <span class="built_in">Int</span> = <span class="number">1</span>  <span class="comment">// 立即赋值</span></div><div class="line">    <span class="keyword">val</span> b = <span class="number">2</span>   <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    <span class="keyword">val</span> c: <span class="built_in">Int</span> <span class="comment">// 如果没有初始值类型不能省略</span></div><div class="line">    c = <span class="number">3</span>       <span class="comment">// 明确赋值</span></div><div class="line">    c += <span class="number">1</span> <span class="comment">//会报错，val不能重新分配</span></div><div class="line">    println(<span class="string">"a = <span class="subst">$a</span>, b = <span class="subst">$b</span>, c = <span class="subst">$c</span>"</span>)</div><div class="line"></div><div class="line">    <span class="keyword">var</span> x = <span class="number">5</span> <span class="comment">// 自动推断出 `Int` 类型</span></div><div class="line">    x += <span class="number">1</span></div><div class="line">    println(<span class="string">"x = <span class="subst">$x</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>带有两个Int参数，返回指定Int值的函数</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">*返回Int类型的参数</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">    <span class="keyword">return</span> a + b</div><div class="line">&#125;</div><div class="line"><span class="comment">//可以省略花括号并且在 = 符号之后指定代码体即可</span></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnInt1</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = a + b</div></pre></td></tr></table></figure>
-<p>带有两个Int参数，返回自动推断类型的函数</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sumReturnVar</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = a + b</div></pre></td></tr></table></figure>
-<p>返回无意义的值的函数</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printSum</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Unit</span> &#123;</div><div class="line">    println(<span class="string">"sum of <span class="subst">$a</span> and <span class="subst">$b</span> is <span class="subst">$&#123;a + b&#125;</span>"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>也可不返回值</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printSum</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> &#123;</div><div class="line">    println(<span class="string">"sum of <span class="subst">$a</span> and <span class="subst">$b</span> is <span class="subst">$&#123;a + b&#125;</span>"</span>)</div><div class="line">     <span class="comment">// 'return Unit' 或者 'return' 是可选的</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>默认参数<br>函数参数可以有默认值，当省略相应的参数时使用默认值，默认值通过类型后面的 = 及给出的值来定义。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">defaultParam</span><span class="params">(b: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;, off: <span class="type">Int</span> = <span class="number">0</span>, len: <span class="type">Int</span> = b.size)</span></span> &#123;</div><div class="line">    println(<span class="string">"len is "</span> + len)</div><div class="line">&#125;</div><div class="line"><span class="comment">//调用</span></div><div class="line">defaultParam(arrayOf(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>))</div></pre></td></tr></table></figure>
-<p>可变数量的参数<br>函数的参数（通常是最后一个）可以用<strong>vararg</strong>修饰符标记</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T&gt;</span> <span class="title">asList</span><span class="params">(<span class="keyword">vararg</span> ts: <span class="type">T</span>)</span></span>: List&lt;T&gt; &#123;</div><div class="line">    <span class="keyword">val</span> result = ArrayList&lt;T&gt;()        </div><div class="line">    <span class="keyword">for</span> (t <span class="keyword">in</span> ts)                      </div><div class="line">        result.add(t)                  </div><div class="line">    <span class="keyword">return</span> result                      </div><div class="line">&#125; </div><div class="line"><span class="comment">//调用</span></div><div class="line"><span class="keyword">val</span> list = asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div></pre></td></tr></table></figure>
-<p>命名参数<br>可以在调用函数时使用命名的函数参数。当一个函数有大量的参数或默认参数时这会非常方便。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">reformat</span><span class="params">(a: <span class="type">String</span>,b: <span class="type">Boolean</span> = <span class="literal">true</span>,c: <span class="type">Boolean</span> = <span class="literal">true</span>,d: <span class="type">Boolean</span> = <span class="literal">false</span>,e: <span class="type">Char</span> = <span class="string">' '</span>)</span></span> &#123;</div><div class="line">    println(<span class="string">"<span class="subst">$a</span>--<span class="subst">$b</span>--<span class="subst">$c</span>--<span class="subst">$d</span>--<span class="subst">$e</span>"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">//使用默认参数来调用它</span></div><div class="line">reformat(<span class="string">"1"</span>)</div><div class="line"><span class="comment">//使用非默认参数调用它</span></div><div class="line">reformat(<span class="string">"1"</span>, <span class="literal">false</span>, <span class="literal">true</span>, <span class="literal">false</span>, <span class="string">'['</span>)</div><div class="line"><span class="comment">//使用命名参数我们可以使代码更具有可读性</span></div><div class="line">reformat(<span class="string">"1"</span>, b = <span class="literal">true</span>, c = <span class="literal">false</span>, d = <span class="literal">false</span>, e = <span class="string">']'</span>)</div><div class="line"><span class="comment">//也可以指定其中一个命名参数调用</span></div><div class="line">reformat(<span class="string">"1"</span>, e = <span class="string">'q'</span>)</div></pre></td></tr></table></figure>
-          
+          Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。
+局部变量
+一次赋值（只读）的局部变量：val
+可变变量：var
+
+123456789101112fun main(args: Array&lt;String&gt;) &#123;    val a: Int =
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Kotlin-one/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -939,17 +917,21 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用Fragment时就必定会用到<strong>FragmentManager</strong>，在FragmentManager中有两个抽象方法：</p>
-<ol>
-<li><strong>getFragment(Bundle bundle, String key)</strong></li>
-<li><strong>putFragment(Bundle bundle, String key, Fragment fragment)</strong></li>
-</ol>
-<p>抽象方法getFragment实现类下的源码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">putFragment</span><span class="params">(Bundle bundle, String key, Fragment fragment)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (fragment.mIndex &lt; <span class="number">0</span>) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment "</span> + fragment+ <span class="string">" is not currently in the FragmentManager"</span>));</div><div class="line">    &#125;</div><div class="line">    bundle.putInt(key, fragment.mIndex);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>抽象方法putFragment实现类下的源码为：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Fragment <span class="title">getFragment</span><span class="params">(Bundle bundle, String key)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> index = bundle.getInt(key, -<span class="number">1</span>);</div><div class="line">    <span class="keyword">if</span> (index == -<span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (index &gt;= mActive.size()) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment no longer exists for key "</span>+ key + <span class="string">": index "</span> + index));</div><div class="line">    &#125;</div><div class="line">    Fragment f = mActive.get(index);</div><div class="line">    <span class="keyword">if</span> (f == <span class="keyword">null</span>) &#123;</div><div class="line">        throwException(<span class="keyword">new</span> IllegalStateException(<span class="string">"Fragment no longer exists for key "</span>+ key + <span class="string">": index "</span> + index));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> f;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>从源码中发现key是为了区分保存在Bundle中的Fragment的，因而key可以随意命名，但是获取和保存的必须一致。<br>在<strong>onSaveInstanceState(Bundle outState)</strong>中调用<strong>putFragment</strong>保存Fragment<br>在<strong>onCreate(Bundle savedInstanceState)</strong>中调用<strong>getFragment</strong>获取Fragment</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 欢迎star源码，源码中有对<strong>FragmentPagerAdapter</strong>抽取封装了一个基类，方便项目中使用。<br> <a href="https://github.com/whyteH/SaveStateForViewPager" target="_blank" rel="external">源代码</a></p>
-          
+          前言在项目研发时，遇到屏幕旋转或改变系统字体后返回App等需求，ViewPager+Fragment布局时，控件为空，数据也没了。这就涉及到Fragment的状态保存。
+使用使用Fragment时就必定会用到FragmentManager，在FragmentManager中有两个抽象方法：
+
+getFragment(Bundle bundle, String key)
+putFragment(Bundle bundle, String key, Fragment fragment)
+
+抽象方法getFragment实现类下的源码为：123456public void putFragment(B
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Save-state-for-fragment/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1112,46 +1094,25 @@
       
         
           
-            <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>虚拟机：<strong>VirtrualBox+Ubuntu16.04</strong>，主机：<strong>Windows10</strong><br>VirtrualBox网络连接方式选择<strong>“桥接网卡”</strong>，如图</p>
-<p></p><p style="text-align:center"><img src="http://image.readtalk.me/VirtualBox_network.png-1"></p><p></p>
-<h2 id="安装SSH-Server"><a href="#安装SSH-Server" class="headerlink" title="安装SSH Server"></a>安装SSH Server</h2><ol>
-<li><p>利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：</p>
-<blockquote>
-<p>sudo apt-get install openssh-server </p>
-</blockquote>
-</li>
-<li><p>这时，有可能会出现一个错误，提示如下：</p>
-<blockquote>
-<p>无法获得锁 /var/lib/apt/lists/lock - open (11 资源暂时不可用)<br>解决办法：把lock的文件强行删掉，运行如下命令：<br>sudo rm /var/lib/apt/lists/lock</p>
-</blockquote>
-</li>
-<li><p>安装完成之后，切记<strong>重启</strong></p>
-<blockquote>
-<p>sudo /etc/init.d/ssh restart</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="Win-安装Xshell"><a href="#Win-安装Xshell" class="headerlink" title="Win 安装Xshell"></a>Win 安装Xshell</h2><ol>
-<li>可以自行百度与谷歌搜索Xshell，安装最新版本，目前我是用的版本为Xshell5。下载后在安装时选择家庭/学校免费版即可。Xshell是使用命令行操作虚拟机中的Ubuntu。</li>
-<li>安装成功后，运行会出现一个会话窗口：<br><p style="text-align:center"><img src="http://image.readtalk.me/Xshell5.png-1"></p></li>
-<li>获取虚拟机中Ubuntu的ip地址，待会有用：<br> <p style="text-align:center"><img src="http://image.readtalk.me/Ubuntu_ip.png-1"></p></li>
-<li>点击左边新建，新建会话属性，协议选择SSH，主机填写上一步获取的ip地址<br><p style="text-align:center"><img src="http://image.readtalk.me/XshellNew.png-1"></p></li>
-<li>填写完后，点击确定，弹出输入用户名，此用户名为Ubuntu登陆使用的用户名，<strong>切记大小写敏感</strong><br> <p style="text-align:center"><img src="http://image.readtalk.me/SSH_username.png-1"></p></li>
-<li>填写完用户名之后，点确定弹出输入密码<br><p style="text-align:center"><img src="http://image.readtalk.me/SSH_pwd.png-1"></p></li>
-<li><p>填写完密码后，点击确定即进行连接，如下所示，表示连接成功</p>
-<blockquote>
-<p>Last login: Thu Jun 15 11:36:21 2017 from 192.168.1.143<br>whyte@whyte-VirtualBox:~$</p>
-</blockquote>
-</li>
-<li><p>这样就可以完美的连接操作虚拟机了。 </p>
-</li>
-</ol>
-<h2 id="Win-安装Xftp"><a href="#Win-安装Xftp" class="headerlink" title="Win 安装Xftp"></a>Win 安装Xftp</h2><ol>
-<li>可以自行百度与谷歌搜索Xftp，安装最新版本，目前我是用的版本为Xftp5。下载后在安装时选择家庭/学校免费版即可。Xftp是用于与虚拟机中的Ubuntu传输文件。</li>
-<li>Xftp与Xshell连接虚拟机方式类似，唯一的不同是协议，这里的协议选择<strong>SFTP</strong>，其他基本类似，就不再赘述了。</li>
-<li>这样就可以很愉快的和虚拟机传输文件了。如图：<br><p style="text-align:center"><img src="http://image.readtalk.me/xftp_transfer.png-1"></p></li>
-</ol>
-          
+          环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图
+
+安装SSH Server
+利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：
+
+sudo apt-get install openssh-server 
+
+
+这时，有可能会出现一个错误，提示如下：
+
+无法获得锁 /var/lib/apt/lists/lock - open (11 资源暂时不可用)解决办法：把lock的文件强行删掉，运行如下命令：sudo
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Ubuntu-and-win-transfer/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1314,11 +1275,16 @@
       
         
           
-            <h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sendBroadcast(<span class="keyword">new</span> Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse(<span class="string">"file://"</span>+ Environment.getExternalStorageDirectory())));</div></pre></td></tr></table></figure></p>
-<p>可以发送两个消息：<br>Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；<br>Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；<br>经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，会出现如下的异常：<br><strong>Permission Denial: not allowed to send broadcast android.intent.action.MEDIA_MOUNTED</strong></p>
-<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>利用MediaScannerConnection实现对添加的文件进行扫描，实现数据实时更新，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MediaScanner</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = MediaScanner.class.getSimpleName();</div><div class="line"></div><div class="line">    <span class="keyword">private</span> MediaScannerConnection mConn = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> ScannerClient mClient;</div><div class="line">    <span class="keyword">private</span> File mFile = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MediaScanner</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (mClient == <span class="keyword">null</span>) &#123;</div><div class="line">            mClient = <span class="keyword">new</span> ScannerClient();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (mConn == <span class="keyword">null</span>) &#123;</div><div class="line">            mConn = <span class="keyword">new</span> MediaScannerConnection(context, mClient);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ScannerClient</span> <span class="keyword">implements</span> <span class="title">MediaScannerConnection</span>.<span class="title">MediaScannerConnectionClient</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMediaScannerConnected</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (mFile == <span class="keyword">null</span>) &#123;</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            scan(mFile);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScanCompleted</span><span class="params">(String path, Uri uri)</span> </span>&#123;</div><div class="line">            mConn.disconnect();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 递归实现扫描文件夹或文件</div><div class="line">         *</div><div class="line">         * <span class="doctag">@param</span> file 文件夹或文件</div><div class="line">         */</div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">scan</span><span class="params">(File file)</span> </span>&#123;</div><div class="line">            Log.i(TAG, <span class="string">"scan "</span> + file.getAbsolutePath());</div><div class="line">            <span class="keyword">if</span> (file.isFile()) &#123;<span class="comment">//为文件时，直接取绝对路径</span></div><div class="line">                mConn.scanFile(file.getAbsolutePath(), <span class="keyword">null</span>);</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            File[] files = file.listFiles();</div><div class="line">            <span class="keyword">if</span> (files == <span class="keyword">null</span>) &#123;</div><div class="line">                <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (File f : file.listFiles()) &#123;</div><div class="line">                scan(f);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">scanFile</span><span class="params">(File file)</span> </span>&#123;</div><div class="line">        mFile = file;</div><div class="line">        mConn.connect();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 有什么问题欢迎留言沟通交流。</p>
-          
+          方法一：网上常用的方法是通过广播发送消息给系统，让系统自动更新一次媒体库，代码如下：1sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://"+ Environment.getExternalStorageDirectory())));
+可以发送两个消息：Intent.ACTION_MEDIA_MOUNTED 扫描整个媒体库；Intent.ACTION_MEDIA_SCANNER_SCAN_FILE 扫描某个文件；经测试发现，这个方法只适用于Android4.4以下的版本，但是从Android4.4开始，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Android-media-data-update/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1481,16 +1447,20 @@
       
         
           
-            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>项目功能越堆越多，就会发生一些莫名的奇妙的问题。有问题总是有原因的嘛，所以今天就说一下，R文件丢失，项目竟然能跑起来，而且还到处报红，这对于一个强迫症而言，简直不能忍。<br>最主要的还是ctrl+鼠标左键不能进行资源文件的跳转，还需要先找布局文件，再copy资源Id去找，不能忍。<br>效果如下图：</p>
-<p></p><p style="text-align:center"><img src="http://image.readtalk.me/lose_r_1.png-1"></p><p></p>
-<p>有问题当然是要解决的，接下来是见证奇迹的时刻了</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol>
-<li>先找到Android Studio 安卓目录中的<strong>idea.properties</strong>文件。如图：<br> <p style="text-align:center"><img src="http://image.readtalk.me/lose_r_2.png-1"></p></li>
-<li>打开这个文件，修改<strong>idea.max.intellisense.filesize</strong>的值。如图：<br><p style="text-align:center"><img src="http://image.readtalk.me/lose_r_3.png-1"></p><br>简单的解释一下，这个设定的意思。<strong>这个属性对编辑器的文件数量会进行一定的限制，以免编辑器变慢和需要消耗系统更多的内存，你可以删除这个属性或者设置一个你需要的最大值。</strong></li>
-<li>修改后保存文件，重启Android Studio，世界一片美好。如图：<br><p style="text-align:center"><img src="http://image.readtalk.me/lose_r_4.png-1"></p></li>
-</ol>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 有什么疑问欢迎留言沟通交流。</p>
-          
+          问题项目功能越堆越多，就会发生一些莫名的奇妙的问题。有问题总是有原因的嘛，所以今天就说一下，R文件丢失，项目竟然能跑起来，而且还到处报红，这对于一个强迫症而言，简直不能忍。最主要的还是ctrl+鼠标左键不能进行资源文件的跳转，还需要先找布局文件，再copy资源Id去找，不能忍。效果如下图：
+
+有问题当然是要解决的，接下来是见证奇迹的时刻了
+解决
+先找到Android Studio 安卓目录中的idea.properties文件。如图： 
+打开这个文件，修改idea.max.intellisense.filesize的值。如图：简单的解释一下，这个设定的意思。这个属性对编辑器的文件数量会进行一定
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/R-lose-but-can-run-project/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1653,11 +1623,17 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。<br>废话少说先上图</p>
-<p></p><p style="text-align:center"><img src="http://image.readtalk.me/not_search_icon.png-1"></p><p></p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">getMenuInflater().inflate(R.menu.menu_search, menu);</div><div class="line">MenuItem searchItem = menu.findItem(R.id.action_search);</div><div class="line">SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);</div><div class="line">searchView.setQueryHint(<span class="string">"搜索"</span>);</div><div class="line"><span class="comment">//设置搜索图标的显示位置，false为显示编辑框在外面，true为显示在编辑框里面</span></div><div class="line">searchView.setIconifiedByDefault(<span class="keyword">false</span>);</div><div class="line">ImageView imageView = (ImageView) searchView.findViewById(R.id.search_mag_icon);</div><div class="line">imageView.setAdjustViewBounds(<span class="keyword">true</span>);</div><div class="line">imageView.setMaxWidth(<span class="number">0</span>);<span class="comment">//设置最大的宽度为0</span></div><div class="line">imageView.setLayoutParams(<span class="keyword">new</span> LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));</div><div class="line">imageView.setImageDrawable(<span class="keyword">null</span>);<span class="comment">//设置资源文件为null</span></div></pre></td></tr></table></figure>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 有什么问题欢迎留言沟通交流。<br> <a href="https://github.com/whyteH/ToolbarNotSearchIcon" target="_blank" rel="external">源代码</a></p>
-          
+          前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图
+
+代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Toolbar-Not-Search-Icon/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1820,9 +1796,15 @@
       
         
           
-            <p>今天是二零一七年六月一日，儿童节，我也想过个节。<br>今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。<br>最近这两年互联网上的过节气氛越来越浓烈，当然不乏一些商家借着过节做营销，人们怀旧情绪好像越来越浓烈了。<br>年后换了份新的工作，来这公司也快两个月了（还有九天），体会到了稍微上点规模的公司，管理上、工作效率上所呈现的问题。也见识到了，传说中经过N个人的开发维护，产生了有点难维护的代码。当然在这里也有一些各方面都很优秀的同事，希望自己能好好适应新的环境，发挥出该有的能力。<br>今年也给自己定个小目标，希望每个月至少写四篇文章，技术或非技术都可以，不追求数量，要求质量。<br>虽然长大了会有很多烦恼和忧愁，但是还是希望能保持一颗童心，对未来有无限的好奇与憧憬。<br>最后，祝六一快乐。</p>
-<p align="right">2017年6月1号晚于公司二楼宿舍</p>
-          
+          今天是二零一七年六月一日，儿童节，我也想过个节。今天无意中看到朋友圈以及一些微信群里都在转发关于儿童节相关的，朋友圈主要是晒自己如何过节或者祝福之类的，也有些文章在写如何保持童心的攻略。微信群里面看到一个视频，拍的是穿着校服的小学生模样在玩游戏，嗯，这个我以前也玩过。最近这两年互联网上的过节气氛越来越浓烈，当然不乏一些商家借着过节做营销，人们怀旧情绪好像越来越浓烈了。年后换了份新的工作，来这公司也快两个月了（还有九天），体会到了稍微上点规模的公司，管理上、工作效率上所呈现的问题。也见识到了，传说中经过N个人的开发维护，产生了有点难维护的代码。当然在这里也有一些各方面都很优秀的同事，希望自己能好
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Children's-Day/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1985,8 +1967,15 @@
       
         
           
-            <center>欢迎来到Whyte的个人主页.</center><br><center>敬请期待下一次更新.</center>
+          欢迎来到Whyte的个人主页.敬请期待下一次更新.
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
