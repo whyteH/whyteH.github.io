@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  275
+                  280
                 </span>
               
 
@@ -393,9 +393,10 @@
           
           最近在解决公司项目遗留问题时，测试反馈一个这样的奔溃问题 
 1Caused by: java.util.regex.PatternSyntaxException: Syntax error in regexp pattern near index 3 .**.
-乍一看，正则语法错误。为什么会出现.*.？还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。这时就需要用到Pattern.quote()，参照官网API，有如下解释：
 
-Returns a literal pattern String for the specified String.简单翻译一下：返
+乍一看，正则语法错误。为什么会出现.*.？&lt;/br&gt;还原一下业务场景：在安卓端本地搜索数据的时候，需要用到正则匹配，假如用户输入“*”时。&lt;/br&gt;这时就需要用到Pattern.quote()，参照官网API，有如下解释：
+
+Returns a literal pattern String for the sp
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -530,7 +531,7 @@ Returns a literal pattern String for the specified String.简单翻译一下：�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  612
+                  615
                 </span>
               
 
@@ -566,11 +567,12 @@ Returns a literal pattern String for the specified String.简单翻译一下：�
       
         
           
-          Kotlin控制流表达式，去掉了Java中的switch，加了when表达式。if表达式比Java功能更多、更灵活。when表达式替换switch也更灵活、更高级。
+          Kotlin控制流表达式，去掉了Java中的switch，加了when表达式。&lt;/br&gt;if表达式比Java功能更多、更灵活。&lt;/br&gt;when表达式替换switch也更灵活、更高级。
 If表达式在 Kotlin 中，if是一个表达式，它可以返回一个值。 因此就不需要三元运算符（条件 ? 然后 : 否则）
 1234val a: Int = 1val b: Int = 3val max = if (a &gt; b) a else bprintln(max)
+
 if的分支可以是代码块，最后的表达式作为该块的值并返回。注意：要像三元表达式一样的用法，则必须要else分支
-12345678val max1 = if (a
+1
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -705,7 +707,7 @@ if的分支可以是代码块，最后的表达式作为该块的值并返回。
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  639
+                  640
                 </span>
               
 
@@ -741,12 +743,12 @@ if的分支可以是代码块，最后的表达式作为该块的值并返回。
       
         
           
-          Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。
+          Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。&lt;/br&gt;由于谷歌官方支持Kotlin，导致Kotlin大热，是时候学习一波了，语法简洁，有取代安卓平台的Java之势，但是由于历史原因，一时半会肯定取代不了，会像IOS的Swift与ObjectC一样的关系存在。
 局部变量
 一次赋值（只读）的局部变量：val
 可变变量：var
 
-123456789101112fun main(args: Array&lt;String&gt;) &#123;    val a: Int =
+123456789101112fun main(args: Array&lt;String&gt;) &#123;    v
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1058,7 +1060,7 @@ putFragment(Bundle bundle, String key, Fragment fragment)
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  525
+                  630
                 </span>
               
 
@@ -1074,7 +1076,7 @@ putFragment(Bundle bundle, String key, Fragment fragment)
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -1095,16 +1097,11 @@ putFragment(Bundle bundle, String key, Fragment fragment)
         
           
           环境虚拟机：VirtrualBox+Ubuntu16.04，主机：Windows10VirtrualBox网络连接方式选择“桥接网卡”，如图
-
+&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/VirtualBox_network.png-1&quot;/&gt;&lt;/p&gt;
 安装SSH Server
 利用Xshell方便我们在windows和虚拟机中操作文件。Ubuntu缺省下是没有安装SSH Server，Client倒是为我们装好了。安装命令：
 
-sudo apt-get install openssh-server 
-
-
-这时，有可能会出现一个错误，提示如下：
-
-无法获得锁 /var/lib/apt/lists/lock - open (11 资源暂时不可用)解决办法：把lock的文件强行删掉，运行如下命令：sudo
+sudo 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1411,7 +1408,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  292
+                  352
                 </span>
               
 
@@ -1448,11 +1445,10 @@ sudo apt-get install openssh-server
         
           
           问题项目功能越堆越多，就会发生一些莫名的奇妙的问题。有问题总是有原因的嘛，所以今天就说一下，R文件丢失，项目竟然能跑起来，而且还到处报红，这对于一个强迫症而言，简直不能忍。最主要的还是ctrl+鼠标左键不能进行资源文件的跳转，还需要先找布局文件，再copy资源Id去找，不能忍。效果如下图：
-
+&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/lose_r_1.png-1&quot;/&gt;&lt;/p&gt;
 有问题当然是要解决的，接下来是见证奇迹的时刻了
 解决
-先找到Android Studio 安卓目录中的idea.properties文件。如图： 
-打开这个文件，修改idea.max.intellisense.filesize的值。如图：简单的解释一下，这个设定的意思。这个属性对编辑器的文件数量会进行一定
+先找到
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1587,7 +1583,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  163
+                  178
                 </span>
               
 
@@ -1624,8 +1620,8 @@ sudo apt-get install openssh-server
         
           
           前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图
-
-代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);searchView.setQueryHint("搜索");//设置搜索图标
+&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/not_search_icon.png-1&quot;/&gt;&lt;/p&gt;
+代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.a
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1760,7 +1756,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  390
+                  394
                 </span>
               
 
@@ -1931,7 +1927,7 @@ sudo apt-get install openssh-server
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  19
+                  23
                 </span>
               
 
@@ -1967,7 +1963,7 @@ sudo apt-get install openssh-server
       
         
           
-          欢迎来到Whyte的个人主页.敬请期待下一次更新.
+          &lt;center&gt;欢迎来到Whyte的个人主页.&lt;/center&gt;&lt;center&gt;敬请期待下一次更新.&lt;/center&gt;
           
           <!--noindex-->
           <div class="post-button text-center">
