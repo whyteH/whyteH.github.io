@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
+    <lastmod>2017-07-26T14:21:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android 仿微博话题及网页链接效果</title>
+        <pubTime>2017-07-25T15:57:04.000Z</pubTime>
+        
+        <tag>TextView</tag>
+         
+        <tag>SpannableStringBuilder</tag>
+         
+        <tag>SpannableString</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
     <lastmod>2017-07-26T11:24:38.000Z</lastmod>
     <data>
@@ -32,26 +56,6 @@
         <pubTime>2017-06-22T11:13:19.000Z</pubTime>
         
         <tag>Fragment</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
-    <lastmod>2017-07-26T11:22:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 仿微博话题及网页链接效果</title>
-        <pubTime>2017-07-25T15:57:04.000Z</pubTime>
-        
-        <tag>TextView</tag>
          
          
            
