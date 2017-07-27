@@ -528,7 +528,7 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  223
+                  222
                 </span>
               
 
@@ -564,10 +564,10 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
       
         
           
-          最近在项目中遇到一个这样的需求：在一段文本中匹配出手机号码，并高亮显示，用于点击拨打电话，发送短信等。&lt;/br&gt;查阅了正则表达式的相关资料，最终找到了解决方案。
+          最近在项目中遇到一个这样的需求：在一段文本中匹配出手机号码，并高亮显示，用于点击拨打电话，发送短信等。查阅了正则表达式的相关资料，最终找到了解决方案。
 负向零宽断言零宽度负预测先行断言断言此位置的后面不能匹配表达式
 零宽度负回顾后发断言断言此位置的前面不能匹配表达式
-代码实现123456789101112131415/** * 零宽度负预测先行断言 (?!exp) * 零宽度负回顾后发断言 (?\&lt;!exp) * 匹配手机号码的前面和后面都不能为数字 * @param source 传入的文本 * @return */public static boolean is
+代码实现123456789101112131415/** * 零宽度负预测先行断言 (?!exp) * 零宽度负回顾后发断言 (?\&lt;!exp) * 匹配手机号码的前面和后面都不能为数字 * @param source 传入的文本 * @return */public static boolean isMatchPhone(
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -702,7 +702,7 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  189
+                  188
                 </span>
               
 
@@ -738,11 +738,11 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
       
         
           
-          在我们使用git作为代码管理器的时候，有时候会遇到文件没有在gitignore中添加忽略就提交了，这时可能在其他地方把代码clone下来，而且修改了里面的内容，才添加到gitignore里面，push代码后，发现无法添加到gitignore。再次修改文件内容又可以commit。&lt;/br&gt;这时候文件右侧会提示 ignored, tracked with git（我用的编辑器是Intellij，其他编辑器未知）
+          在我们使用git作为代码管理器的时候，有时候会遇到文件没有在gitignore中添加忽略就提交了，这时可能在其他地方把代码clone下来，而且修改了里面的内容，才添加到gitignore里面，push代码后，发现无法添加到gitignore。再次修改文件内容又可以commit。这时候文件右侧会提示 ignored, tracked with git（我用的编辑器是Intellij，其他编辑器未知）
 解决方法处理指定单个文件
 123git rm --cached &lt;文件的名称&gt; 如：git rm --cached kotlinc.xml
-
-批量处理文件夹里面的问
+批量处理文件夹里面的问题
+12git rm -
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -916,9 +916,8 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
           我们在项目中，按钮点击跳转页面或者执行某个事件时，有时候需要防止用户重复点击，防止重复执行某个事件或接口调用等。这时候就需要用到JakeWharton大神的RxBinding
 使用引用依赖包
 123compile 'io.reactivex.rxjava2:rxjava:2.1.1'//这个是基于上面的rxjava的compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-
 一个普通的View点击
-12345678RxView.clicks(btnClick).throttleFirst(1, TimeUnit.SECONDS).subscrib
+12345678RxView.clicks(btnClick).throttleFirst(1, TimeUnit.SECONDS).subscribe
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1053,7 +1052,7 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,160
+                  1,158
                 </span>
               
 
@@ -1574,7 +1573,7 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,290
+                  1,278
                 </span>
               
 
@@ -1610,12 +1609,14 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
       
         
           
-          Kotlin中的匿名对象对应的是Java中的匿名内部类。&lt;/br&gt;Kotlin中的数据类方便我们去保存数据。&lt;/br&gt;接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。
-对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。&lt;/br&gt;
+          Kotlin中的匿名对象对应的是Java中的匿名内部类。Kotlin中的数据类方便我们去保存数据。接下来本文将和大家说一下，对象表达式和对象声明及数据类相关定义的语法糖。
+对象表达式和对象声明我们需要创建一个对某个类做了轻微改动的类的对象，而不用为之显式声明新的子类。Java用匿名内部类处理这种情况。Kotlin中则用对象表达式和对象声明。
 
-对象表达式是在使用他们的地方立即执行（及初始化）的&lt;/br&gt;
-对象声明是在第一次被访问到时延迟初始化的&lt;/br&gt;
-伴生对象的初始化是在相应的类被加载（解析）时，与J
+对象表达式是在使用他们的地方立即执行（及初始化）的
+对象声明是在第一次被访问到时延迟初始化的
+伴生对象的初始化是在相应的类被加载（解析）时，与Java静态初始化器的语义相匹配
+
+对象表达式先写一个Java中的匿名内部类，好和Kotlin中对象表达式作比较
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1750,7 +1751,7 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,377
+                  1,372
                 </span>
               
 
@@ -1786,12 +1787,12 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
       
         
           
-          类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。&lt;/br&gt;Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。&lt;/br&gt;特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖&lt;/br&gt;Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议
+          类可以包含：构造函数和初始化块、函数、属性、嵌套类和内部类、对象声明。Kotlin中类的语法糖，相对Java还是有很多不同，简洁为主的Kotlin语法在类的定义上，省去了Java在定义实体类时必须初始化的一堆get、set方法。特别是在继承的时候，覆盖方法时有对应的覆盖规则，可以按需覆盖Kotlin在设计继承的时候，也遵循了Effective Java书中对于继承的规范建议
 
 要么为继承而设计，并提供文档说明，要么就禁止继承。
 
 接下来和大家分享Kotlin中定义类和继承等相关语法糖。
-类Kotlin中类的定义和Java一样都是
+类Kotlin中类的定义和Java一样都是用的关键词class，但是一个类中没有任何内容的话，可以去掉花括号
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1964,12 +1965,10 @@ TextView实现setMovementMethod方法首先得让TextView支持网页链接及�
           
           Mac OS X -bash 基本命令失效后的修复具体不知到啥时候弄了啥，导致哪里出了错，竟然所有的-bash基本命令都失败了。
 1-bash: ls :command not found
-
 在terminal里面输入如下命令，这样命令暂时可以用了。
 1export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
-
 赶紧用open -e ~/.bash_profile在文本编辑器里面打开.bash_profile文件。更改PATH环境变量设置，添加上这一行。
-1export PATH=/usr/bin:/bin:/u
+1export PATH=/usr/bin:/bin:/usr
           ...
           <!--noindex-->
           <div class="post-button text-center">

@@ -4,6 +4,70 @@
 
     
   <url>
+    <loc>http://laosiji.tech/R-lose-but-can-run-project/</loc>
+    <lastmod>2017-07-27T15:22:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>R文件丢失，到处报红，但项目仍可以跑起来</title>
+        <pubTime>2017-06-12T13:32:00.000Z</pubTime>
+        
+        <tag>Android Studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Ubuntu-and-win-transfer/</loc>
+    <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>虚拟机中的Ubuntu与主机Win交互</title>
+        <pubTime>2017-06-15T14:30:11.000Z</pubTime>
+        
+        <tag>Xshell</tag>
+         
+        <tag>Xftp</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ubuntu" url="http://laosiji.tech/categories/Ubuntu/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Toolbar-Not-Search-Icon/</loc>
+    <lastmod>2017-07-27T15:15:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android Toolbar SearchView在代码中去掉左边搜索图标</title>
+        <pubTime>2017-06-05T15:01:37.000Z</pubTime>
+        
+        <tag>Toolbar</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
     <lastmod>2017-07-27T15:06:25.000Z</lastmod>
     <data>
@@ -61,70 +125,6 @@
            
              
               <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Toolbar-Not-Search-Icon/</loc>
-    <lastmod>2017-07-26T11:15:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android Toolbar SearchView在代码中去掉左边搜索图标</title>
-        <pubTime>2017-06-05T15:01:37.000Z</pubTime>
-        
-        <tag>Toolbar</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/R-lose-but-can-run-project/</loc>
-    <lastmod>2017-07-26T11:13:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>R文件丢失，到处报红，但项目仍可以跑起来</title>
-        <pubTime>2017-06-12T13:32:00.000Z</pubTime>
-        
-        <tag>Android Studio</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Ubuntu-and-win-transfer/</loc>
-    <lastmod>2017-07-26T11:12:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>虚拟机中的Ubuntu与主机Win交互</title>
-        <pubTime>2017-06-15T14:30:11.000Z</pubTime>
-        
-        <tag>Xshell</tag>
-         
-        <tag>Xftp</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ubuntu" url="http://laosiji.tech/categories/Ubuntu/"/>
           
         </display>
     </data>

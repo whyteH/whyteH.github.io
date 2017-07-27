@@ -88,17 +88,19 @@
 
 
 
-<meta name="description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/not_search_icon.png-1&amp;quot;/&amp;gt;&amp;lt;/p&amp;gt; 代码实现1234567">
+<meta name="description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView search">
 <meta name="keywords" content="Toolbar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Toolbar SearchView在代码中去掉左边搜索图标">
 <meta property="og:url" content="http://laosiji.tech/Toolbar-Not-Search-Icon/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/not_search_icon.png-1&amp;quot;/&amp;gt;&amp;lt;/p&amp;gt; 代码实现1234567">
-<meta property="og:updated_time" content="2017-07-26T11:15:06.000Z">
+<meta property="og:description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView search">
+<meta property="og:image" content="http://image.readtalk.me/not_search_icon.png-1">
+<meta property="og:updated_time" content="2017-07-27T15:15:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Toolbar SearchView在代码中去掉左边搜索图标">
-<meta name="twitter:description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 &amp;lt;P style=&amp;quot;text-align:center&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://image.readtalk.me/not_search_icon.png-1&amp;quot;/&amp;gt;&amp;lt;/p&amp;gt; 代码实现1234567">
+<meta name="twitter:description" content="前言最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。废话少说先上图 代码实现1234567891011getMenuInflater().inflate(R.menu.menu_search, menu);MenuItem searchItem = menu.findItem(R.id.action_search);SearchView search">
+<meta name="twitter:image" content="http://image.readtalk.me/not_search_icon.png-1">
 
 
 
@@ -355,7 +357,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  178
+                  163
                 </span>
               
 
@@ -389,10 +391,8 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。<br>废话少说先上图</p>
-<p>&lt;P style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;http://image.readtalk.me/not_search_icon.png-1&quot;/&gt;&lt;/p&gt;</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">getMenuInflater().inflate(R.menu.menu_search, menu);</div><div class="line">MenuItem searchItem = menu.findItem(R.id.action_search);</div><div class="line">SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);</div><div class="line">searchView.setQueryHint(<span class="string">"搜索"</span>);</div><div class="line"><span class="comment">//设置搜索图标的显示位置，false为显示编辑框在外面，true为显示在编辑框里面</span></div><div class="line">searchView.setIconifiedByDefault(<span class="keyword">false</span>);</div><div class="line">ImageView imageView = (ImageView) searchView.findViewById(R.id.search_mag_icon);</div><div class="line">imageView.setAdjustViewBounds(<span class="keyword">true</span>);</div><div class="line">imageView.setMaxWidth(<span class="number">0</span>);<span class="comment">//设置最大的宽度为0</span></div><div class="line">imageView.setLayoutParams(<span class="keyword">new</span> LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));</div><div class="line">imageView.setImageDrawable(<span class="keyword">null</span>);<span class="comment">//设置资源文件为null</span></div></pre></td></tr></table></figure>
-</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在项目开发中遇到一个关于Toolbar中SearchView需要去掉左边搜索图标的一个需求。<br>废话少说先上图<br><img src="http://image.readtalk.me/not_search_icon.png-1" alt="demo"></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">getMenuInflater().inflate(R.menu.menu_search, menu);</div><div class="line">MenuItem searchItem = menu.findItem(R.id.action_search);</div><div class="line">SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);</div><div class="line">searchView.setQueryHint(<span class="string">"搜索"</span>);</div><div class="line"><span class="comment">//设置搜索图标的显示位置，false为显示编辑框在外面，true为显示在编辑框里面</span></div><div class="line">searchView.setIconifiedByDefault(<span class="keyword">false</span>);</div><div class="line">ImageView imageView = (ImageView) searchView.findViewById(R.id.search_mag_icon);</div><div class="line">imageView.setAdjustViewBounds(<span class="keyword">true</span>);</div><div class="line">imageView.setMaxWidth(<span class="number">0</span>);<span class="comment">//设置最大的宽度为0</span></div><div class="line">imageView.setLayoutParams(<span class="keyword">new</span> LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT));</div><div class="line">imageView.setImageDrawable(<span class="keyword">null</span>);<span class="comment">//设置资源文件为null</span></div></pre></td></tr></table></figure>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p> 有什么问题欢迎留言沟通交流。<br> <a href="https://github.com/whyteH/ToolbarNotSearchIcon" target="_blank" rel="external">源代码</a></p>
       
     </div>
