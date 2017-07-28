@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
+    <lastmod>2017-07-28T14:03:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android 仿微博话题及网页链接</title>
+        <pubTime>2017-07-25T15:57:04.000Z</pubTime>
+        
+        <tag>TextView</tag>
+         
+        <tag>SpannableStringBuilder</tag>
+         
+        <tag>SpannableString</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/R-lose-but-can-run-project/</loc>
     <lastmod>2017-07-27T15:22:35.000Z</lastmod>
     <data>
@@ -56,30 +80,6 @@
         <pubTime>2017-06-05T15:01:37.000Z</pubTime>
         
         <tag>Toolbar</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://laosiji.tech/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
-    <lastmod>2017-07-27T15:06:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android 仿微博话题及网页链接效果</title>
-        <pubTime>2017-07-25T15:57:04.000Z</pubTime>
-        
-        <tag>TextView</tag>
-         
-        <tag>SpannableStringBuilder</tag>
-         
-        <tag>SpannableString</tag>
          
          
            
