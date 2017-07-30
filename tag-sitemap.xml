@@ -93,41 +93,6 @@
     </url>
 
     <url>
-        <loc>http://laosiji.tech/tags/Xshell/</loc>
-        <lastmod>2017-07-26T11:12:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://laosiji.tech/tags/Xftp/</loc>
-        <lastmod>2017-07-26T11:12:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://laosiji.tech/tags/Ubuntu/</loc>
-        <lastmod>2017-07-26T11:12:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://laosiji.tech/tags/Android-Studio/</loc>
-        <lastmod>2017-07-26T11:13:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://laosiji.tech/tags/Toolbar/</loc>
-        <lastmod>2017-07-26T11:15:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://laosiji.tech/tags/Fragment/</loc>
         <lastmod>2017-07-26T11:24:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -142,22 +107,64 @@
     </url>
 
     <url>
+        <loc>http://laosiji.tech/tags/Toolbar/</loc>
+        <lastmod>2017-07-27T15:15:11.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Xshell/</loc>
+        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Xftp/</loc>
+        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Ubuntu/</loc>
+        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Android-Studio/</loc>
+        <lastmod>2017-07-27T15:22:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://laosiji.tech/tags/TextView/</loc>
-        <lastmod>2017-07-26T14:21:06.000Z</lastmod>
+        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/SpannableStringBuilder/</loc>
-        <lastmod>2017-07-26T14:21:06.000Z</lastmod>
+        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/SpannableString/</loc>
-        <lastmod>2017-07-26T14:21:06.000Z</lastmod>
+        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/</loc>
+        <lastmod>2017-07-30T02:01:23.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
