@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="瞎说,">
+  <meta name="keywords" content="Android源码,">
 
 
 
@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="北京时间，9月13日凌晨1点，苹果手机在乔布斯剧院召开发布会，iphone X是苹果十年纪念版，采用全面屏，去掉Home键，采用面部识别解锁技术，并引入无线充电技术。重点是10月27日开始预购。 创新对于一个科技公司而言是极为重要的，意味着要敢于人先，特别是卖手机的，如果无法让人有很强的购买欲，很想买来体验、装X等，又有谁愿意一年换一个呢。很明显，iphone X又可以让一波人，卖肾或吃土装X了。">
-<meta name="keywords" content="瞎说">
+<meta name="description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
+<meta name="keywords" content="Android源码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="也说说iphone X">
-<meta property="og:url" content="http://laosiji.tech/Talk-iphone-X/index.html">
+<meta property="og:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
+<meta property="og:url" content="http://laosiji.tech/Android-source-find-java-native-c/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="北京时间，9月13日凌晨1点，苹果手机在乔布斯剧院召开发布会，iphone X是苹果十年纪念版，采用全面屏，去掉Home键，采用面部识别解锁技术，并引入无线充电技术。重点是10月27日开始预购。 创新对于一个科技公司而言是极为重要的，意味着要敢于人先，特别是卖手机的，如果无法让人有很强的购买欲，很想买来体验、装X等，又有谁愿意一年换一个呢。很明显，iphone X又可以让一波人，卖肾或吃土装X了。">
-<meta property="og:updated_time" content="2017-09-13T00:56:00.000Z">
+<meta property="og:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
+<meta property="og:updated_time" content="2017-10-24T13:17:07.269Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="也说说iphone X">
-<meta name="twitter:description" content="北京时间，9月13日凌晨1点，苹果手机在乔布斯剧院召开发布会，iphone X是苹果十年纪念版，采用全面屏，去掉Home键，采用面部识别解锁技术，并引入无线充电技术。重点是10月27日开始预购。 创新对于一个科技公司而言是极为重要的，意味着要敢于人先，特别是卖手机的，如果无法让人有很强的购买欲，很想买来体验、装X等，又有谁愿意一年换一个呢。很明显，iphone X又可以让一波人，卖肾或吃土装X了。">
+<meta name="twitter:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
+<meta name="twitter:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://laosiji.tech/Talk-iphone-X/">
+  <link rel="canonical" href="http://laosiji.tech/Android-source-find-java-native-c/">
 
 
 
 
 
-  <title>也说说iphone X | Whyte's blogs</title>
+  <title>如何在Android源码中查找Java代码中native函数对应的C++实现 | Whyte's blogs</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +272,7 @@
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://laosiji.tech/Talk-iphone-X/">
+    <link itemprop="mainEntityOfPage" href="http://laosiji.tech/Android-source-find-java-native-c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Whyte">
@@ -289,7 +289,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">也说说iphone X</h2>
+          <h2 class="post-title" itemprop="name headline">如何在Android源码中查找Java代码中native函数对应的C++实现</h2>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T08:21:52+08:00">
-                2017-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-19T20:15:51+08:00">
+                2017-10-19
               </time>
             
 
@@ -311,28 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/胡说八道/" itemprop="url" rel="index">
-                    <span itemprop="name">胡说八道</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -355,7 +333,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  305
+                  605
                 </span>
               
 
@@ -371,7 +349,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -389,9 +367,89 @@
       
 
       
-        <p>北京时间，9月13日凌晨1点，苹果手机在乔布斯剧院召开发布会，iphone X是苹果十年纪念版，采用全面屏，去掉Home键，采用面部识别解锁技术，并引入无线充电技术。<br>重点是10月27日开始<strong>预购</strong>。</p>
-<p>创新对于一个科技公司而言是极为重要的，<br>意味着要敢于人先，<br>特别是卖手机的，<br>如果无法让人有很强的购买欲，<br>很想买来体验、装X等，<br>又有谁愿意一年换一个呢。<br>很明显，iphone X又可以让一波人，<br>卖肾或吃土装X了。<br>网传备货量很少，<br>本人猜测应该是工艺的要求比较高，良品率会比较低，<br>所以前期出货的速度会比较慢，<br>如果备货太多也会有风险，<br>发布会过后还得看看市场反应，来相应的调整产能，<br>销量如何还得看看市场反应、口碑和营销等，<br>当然苹果的营销是做得很好的，<br>就看新产品能否经得住市场的考验。</p>
-<p>虽然我是Android用户，但是也祝苹果大卖，让创新得以延续，得以进步。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们以<strong>MediaPlayer</strong>为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。</p>
+<p><br></p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>例如我们要查找如下Java代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">_setDataSource</span><span class="params">(FileDescriptor fd, <span class="keyword">long</span> offset, <span class="keyword">long</span> length)</span></span></div></pre></td></tr></table></figure>
+<p>源码中C++的名字一般都是包名<em>类名</em>方法名进行命名的，比如上面的就是android_media_MediaPlayer_setDataSource。但是这个有点不同，利用Android studio全局搜索后发现，并没有找到对应的实现，因为_setDataSource有重载的两个方法，会找到如下代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> JNINativeMethod gMethods[] = &#123;</div><div class="line">    &#123;</div><div class="line">        <span class="string">"nativeSetDataSource"</span>,</div><div class="line">        <span class="string">"(Landroid/os/IBinder;Ljava/lang/String;[Ljava/lang/String;"</span></div><div class="line">        <span class="string">"[Ljava/lang/String;)V"</span>,</div><div class="line">        (<span class="keyword">void</span> *)android_media_MediaPlayer_setDataSourceAndHeaders</div><div class="line">    &#125;,</div><div class="line"></div><div class="line">    &#123;<span class="string">"_setDataSource"</span>,      <span class="string">"(Ljava/io/FileDescriptor;JJ)V"</span>,    (<span class="keyword">void</span> *)android_media_MediaPlayer_setDataSourceFD&#125;,</div><div class="line">    &#123;<span class="string">"_setDataSource"</span>,      <span class="string">"(Landroid/media/MediaDataSource;)V"</span>,(<span class="keyword">void</span> *)android_media_MediaPlayer_setDataSourceCallback &#125;,</div><div class="line">    &#123;<span class="string">"_setVideoSurface"</span>,    <span class="string">"(Landroid/view/Surface;)V"</span>,        (<span class="keyword">void</span> *)android_media_MediaPlayer_setVideoSurface&#125;,</div><div class="line">    &#123;<span class="string">"_prepare"</span>,            <span class="string">"()V"</span>,                              (<span class="keyword">void</span> *)android_media_MediaPlayer_prepare&#125;,</div><div class="line">    &#123;<span class="string">"prepareAsync"</span>,        <span class="string">"()V"</span>,                              (<span class="keyword">void</span> *)android_media_MediaPlayer_prepareAsync&#125;,</div><div class="line">    &#123;<span class="string">"_start"</span>,              <span class="string">"()V"</span>,                              (<span class="keyword">void</span> *)android_media_MediaPlayer_start&#125;,</div><div class="line">    <span class="comment">//太长，略掉一部分......</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>下面说一下<strong>JNINativeMethod</strong>这个在c++中的结构体，在 jni.h 头文件中定义为：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* name;</div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* signature;</div><div class="line">    <span class="keyword">void</span>*       fnPtr;</div><div class="line">&#125; JNINativeMethod;</div></pre></td></tr></table></figure>
+<p>android源码中Java与jni通过该结构体建立联系，其中有三个变量： </p>
+<ol>
+<li>name是Java中函数的名字。</li>
+<li>signature，用字符串是描述了Java中函数的参数和返回值</li>
+<li>fnPtr是函数指针，指向native函数。前面都要加(void *)</li>
+</ol>
+<p>主要是第二个参数比较复杂，如”(Ljava/io/FileDescriptor;JJ)V”，括号里面表示参数的类型，括号后面表示返回值，V表示返回值为void，这些字符与函数的参数类型的映射表如下：</p>
+<h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><table>
+<thead>
+<tr>
+<th>字段描述</th>
+<th style="text-align:center">Java语言类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z</td>
+<td style="text-align:center">boolean</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align:center">byte</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:center">char</td>
+</tr>
+<tr>
+<td>S</td>
+<td style="text-align:center">short</td>
+</tr>
+<tr>
+<td>I</td>
+<td style="text-align:center">int</td>
+</tr>
+<tr>
+<td>J</td>
+<td style="text-align:center">long</td>
+</tr>
+<tr>
+<td>F</td>
+<td style="text-align:center">float</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align:center">double</td>
+</tr>
+</tbody>
+</table>
+<h4 id="对象类型与数组类型"><a href="#对象类型与数组类型" class="headerlink" title="对象类型与数组类型"></a>对象类型与数组类型</h4><table>
+<thead>
+<tr>
+<th>字段描述</th>
+<th style="text-align:center">Java语言类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“LJava/lang/String”</td>
+<td style="text-align:center">String</td>
+</tr>
+<tr>
+<td>“[I”</td>
+<td style="text-align:center">int[]</td>
+</tr>
+<tr>
+<td>“[Ljava/lang/Object;”</td>
+<td style="text-align:center">Object[]</td>
+</tr>
+</tbody>
+</table>
+<p>对象类型：以”L”开头，以”;”结尾，中间是用”/“ 隔开。如上表第1个 ;<br><br>数组类型：以”[“开始。如上表第2个（n维数组的话，则是前面多少个”[“而已，如”[[[D”表示“double[][][]”）;<br><br>对象数组类型：上述两者结合，如上表第3个。<br><br>看完这个就知道”(Ljava/io/FileDescriptor;JJ)V”用的是哪个方法了吧。</p>
+<p>根据上面梳理的方法就可以找到c++对应的方法，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span></span></div><div class="line"><span class="title">android_media_MediaPlayer_setDataSourceFD</span><span class="params">(JNIEnv *env, jobject thiz, jobject fileDescriptor, jlong offset, jlong length)</span></div><div class="line">&#123;</div><div class="line">    sp&lt;MediaPlayer&gt; mp = getMediaPlayer(env, thiz);</div><div class="line">    <span class="keyword">if</span> (mp == <span class="literal">NULL</span> ) &#123;</div><div class="line">        jniThrowException(env, <span class="string">"java/lang/IllegalStateException"</span>, <span class="literal">NULL</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (fileDescriptor == <span class="literal">NULL</span>) &#123;</div><div class="line">        jniThrowException(env, <span class="string">"java/lang/IllegalArgumentException"</span>, <span class="literal">NULL</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> fd = jniGetFDFromFileDescriptor(env, fileDescriptor);</div><div class="line">    ALOGV(<span class="string">"setDataSourceFD: fd %d"</span>, fd);</div><div class="line">    process_media_player_call( env, thiz, mp-&gt;setDataSource(fd, offset, length), <span class="string">"java/io/IOException"</span>, <span class="string">"setDataSourceFD failed."</span> );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这时候需要看懂实现，就需要熟悉c++语言了。</p>
       
     </div>
 
@@ -445,7 +503,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://laosiji.tech/Talk-iphone-X/" title="也说说iphone X">http://laosiji.tech/Talk-iphone-X/</a>
+      <a href="http://laosiji.tech/Android-source-find-java-native-c/" title="如何在Android源码中查找Java代码中native函数对应的C++实现">http://laosiji.tech/Android-source-find-java-native-c/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -461,7 +519,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/瞎说/" rel="tag"># 瞎说</a>
+            <a href="/tags/Android源码/" rel="tag"># Android源码</a>
           
         </div>
       
@@ -474,8 +532,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Write-blogs-realize/" rel="next" title="也说一下我为什么要写博客">
-                <i class="fa fa-chevron-left"></i> 也说一下我为什么要写博客
+              <a href="/Git-command/" rel="next" title="Git命令集锦">
+                <i class="fa fa-chevron-left"></i> Git命令集锦
               </a>
             
           </div>
@@ -483,10 +541,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Git-command/" rel="prev" title="Git命令集锦">
-                Git命令集锦 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,8 +587,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Whyte">
           <p class="site-author-name" itemprop="name">Whyte</p>
@@ -614,6 +677,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.0.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象类型与数组类型"><span class="nav-number">2.0.2.</span> <span class="nav-text">对象类型与数组类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

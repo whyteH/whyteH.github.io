@@ -4,6 +4,43 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Android-source-find-java-native-c/</loc>
+    <lastmod>2017-10-24T13:17:07.269Z</lastmod>
+    <data>
+        <display>
+        <title>如何在Android源码中查找Java代码中native函数对应的C++实现</title>
+        <pubTime>2017-10-19T12:15:51.000Z</pubTime>
+        
+        <tag>Android源码</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Git-command/</loc>
+    <lastmod>2017-10-17T16:20:27.009Z</lastmod>
+    <data>
+        <display>
+        <title>Git命令集锦</title>
+        <pubTime>2017-10-17T16:13:46.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://laosiji.tech/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Imitate-weibo-topic-Webpage/</loc>
     <lastmod>2017-10-15T06:10:46.448Z</lastmod>
     <data>
