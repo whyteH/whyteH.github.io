@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
+<meta name="description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
 <meta name="keywords" content="Android源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
 <meta property="og:url" content="http://laosiji.tech/Android-source-find-java-native-c/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
-<meta property="og:updated_time" content="2017-10-24T13:17:07.269Z">
+<meta property="og:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
+<meta property="og:updated_time" content="2017-10-24T13:19:04.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
-<meta name="twitter:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。  开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是and">
+<meta name="twitter:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
 
 
 
@@ -367,8 +367,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们以<strong>MediaPlayer</strong>为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。</p>
-<p><br></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们以<strong>MediaPlayer</strong>为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。<br></p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>例如我们要查找如下Java代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">_setDataSource</span><span class="params">(FileDescriptor fd, <span class="keyword">long</span> offset, <span class="keyword">long</span> length)</span></span></div></pre></td></tr></table></figure>
 <p>源码中C++的名字一般都是包名<em>类名</em>方法名进行命名的，比如上面的就是android_media_MediaPlayer_setDataSource。但是这个有点不同，利用Android studio全局搜索后发现，并没有找到对应的实现，因为_setDataSource有重载的两个方法，会找到如下代码：</p>
