@@ -88,17 +88,17 @@
 
 
 
-<meta name="description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
+<meta name="description" content="前言我们Android应用攻城狮也应该人手拥有一份Android源码会有助于我们找到问题，和解决问题，bigger也是扛扛的。下面跟大家分享一下，如何在源码中定位到Java代码中的native函数对应的C++实现，注意是以MediaPlayer为例。查找代码之前跟大家说一下Android源码基本的目录结构。 源码目录结构下面是6.0.1的最外层最基本的源码目录结构 |– abi （applicat">
 <meta name="keywords" content="Android源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
 <meta property="og:url" content="http://laosiji.tech/Android-source-find-java-native-c/index.html">
 <meta property="og:site_name" content="Whyte&#39;s blogs">
-<meta property="og:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
-<meta property="og:updated_time" content="2017-10-24T13:19:04.097Z">
+<meta property="og:description" content="前言我们Android应用攻城狮也应该人手拥有一份Android源码会有助于我们找到问题，和解决问题，bigger也是扛扛的。下面跟大家分享一下，如何在源码中定位到Java代码中的native函数对应的C++实现，注意是以MediaPlayer为例。查找代码之前跟大家说一下Android源码基本的目录结构。 源码目录结构下面是6.0.1的最外层最基本的源码目录结构 |– abi （applicat">
+<meta property="og:updated_time" content="2017-10-25T12:24:34.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在Android源码中查找Java代码中native函数对应的C++实现">
-<meta name="twitter:description" content="前言我们以MediaPlayer为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。 开始例如我们要查找如下Java代码 1private native void _setDataSource(FileDescriptor fd, long offset, long length) 源码中C++的名字一般都是包名类名方法名进行命名的，比如上面的就是andr">
+<meta name="twitter:description" content="前言我们Android应用攻城狮也应该人手拥有一份Android源码会有助于我们找到问题，和解决问题，bigger也是扛扛的。下面跟大家分享一下，如何在源码中定位到Java代码中的native函数对应的C++实现，注意是以MediaPlayer为例。查找代码之前跟大家说一下Android源码基本的目录结构。 源码目录结构下面是6.0.1的最外层最基本的源码目录结构 |– abi （applicat">
 
 
 
@@ -333,7 +333,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  605
+                  1,013
                 </span>
               
 
@@ -349,7 +349,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -367,7 +367,10 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们以<strong>MediaPlayer</strong>为例，来看一下在Android源码中如何去查找Java代码中native函数对应的C++实现。<br></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们Android应用攻城狮也应该人手拥有一份Android源码会有助于我们找到问题，和解决问题，bigger也是扛扛的。<br><br>下面跟大家分享一下，如何在源码中定位到Java代码中的native函数对应的C++实现，注意是以<strong>MediaPlayer</strong>为例。<br><br>查找代码之前跟大家说一下Android源码基本的目录结构。</p>
+<h2 id="源码目录结构"><a href="#源码目录结构" class="headerlink" title="源码目录结构"></a>源码目录结构</h2><p>下面是6.0.1的最外层最基本的源码目录结构</p>
+<p>|– abi （application binary interface，应用程序二进制接口，生成libgabi++.so相关库文件）<br>|– art （google在4.4后加入用来代替Dalvik的运行时）<br>|– bionic (Android的C library，即C库文件)<br>|– bootable （启动引导相关代码）<br>|– build （存放系统编译规则及generic等基础开发配置包）<br>|– cts （Android兼容性测试套件标准）<br>|– dalvik （dalvik JAVA虚拟机）<br>|– developers (开发者用，存放几个例子)<br>|– development （开发者需要的一些例程及工具）<br>|– device (设备相关代码，这是各厂商需要配置和修改的代码)<br>|– docs (介绍开源相关文档)<br>|– external （android使用的一些开源的模组）<br>|– frameworks （核心框架——java及C++语言）<br>|– hardware （部分厂家开源的硬解适配层HAL代码）<br>|– libcore (核心库相关)<br>|– libnativehelper (JNI用到的库)<br>|– ndk (ndk相关)<br>|– out （编译完成后的代码输出目录）<br>|– packages （应用程序包）<br>|– pdk (google用来减少碎片化的东西)<br>|– prebuilt （x86和arm架构下预编译的一些资源）<br>|– sdk （sdk及模拟器）<br>|– platform_testing （平台测试）<br>|– tools （工具）<br>|– system （底层文件系统库、应用及组件——C语言）</p>
+<p>经过上面目录结构的查看，我门要查找C++的代码，主要是在<strong>frameworks</strong>文件夹里面的各种文件夹里面。</p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>例如我们要查找如下Java代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">native</span> <span class="keyword">void</span> <span class="title">_setDataSource</span><span class="params">(FileDescriptor fd, <span class="keyword">long</span> offset, <span class="keyword">long</span> length)</span></span></div></pre></td></tr></table></figure>
 <p>源码中C++的名字一般都是包名<em>类名</em>方法名进行命名的，比如上面的就是android_media_MediaPlayer_setDataSource。但是这个有点不同，利用Android studio全局搜索后发现，并没有找到对应的实现，因为_setDataSource有重载的两个方法，会找到如下代码：</p>
@@ -686,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型"><span class="nav-number">2.0.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象类型与数组类型"><span class="nav-number">2.0.2.</span> <span class="nav-text">对象类型与数组类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码目录结构"><span class="nav-number">2.</span> <span class="nav-text">源码目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.0.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象类型与数组类型"><span class="nav-number">3.0.2.</span> <span class="nav-text">对象类型与数组类型</span></a></li></ol></li></ol></div>
             
 
           </div>
