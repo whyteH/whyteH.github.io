@@ -149,46 +149,6 @@
 
     
   <url>
-    <loc>http://laosiji.tech/Children's-Day/</loc>
-    <lastmod>2017-08-09T11:04:49.000Z</lastmod>
-    <data>
-        <display>
-        <title>六一儿童节</title>
-        <pubTime>2017-06-01T14:10:08.000Z</pubTime>
-        
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/Write-blogs-realize/</loc>
-    <lastmod>2017-08-09T11:01:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>也说一下我为什么要写博客</title>
-        <pubTime>2017-07-29T20:50:47.000Z</pubTime>
-        
-        <tag>关于写作</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
     <lastmod>2017-07-26T11:24:38.000Z</lastmod>
     <data>
@@ -306,26 +266,6 @@
            
              
               <breadCrumb title="Kotlin" url="http://laosiji.tech/categories/Kotlin/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://laosiji.tech/About-cao-cao/</loc>
-    <lastmod>2017-07-09T07:00:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>“闲扯”一下曹操</title>
-        <pubTime>2017-07-08T04:49:50.000Z</pubTime>
-        
-        <tag>杂写</tag>
-         
-         
-           
-             
-              <breadCrumb title="三国" url="http://laosiji.tech/categories/%E4%B8%89%E5%9B%BD/"/>
           
         </display>
     </data>
