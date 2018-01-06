@@ -2,13 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://laosiji.tech/tags/Life/</loc>
-        <lastmod>2017-06-05T16:10:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://laosiji.tech/tags/MediaScannerConnection/</loc>
         <lastmod>2017-06-14T14:33:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -65,13 +58,6 @@
     </url>
 
     <url>
-        <loc>http://laosiji.tech/tags/Git/</loc>
-        <lastmod>2017-07-25T14:38:23.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://laosiji.tech/tags/rxJava/</loc>
         <lastmod>2017-07-25T14:38:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -107,64 +93,99 @@
     </url>
 
     <url>
-        <loc>http://laosiji.tech/tags/Toolbar/</loc>
-        <lastmod>2017-07-27T15:15:11.000Z</lastmod>
+        <loc>http://laosiji.tech/tags/%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/</loc>
+        <lastmod>2017-08-09T11:01:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Life/</loc>
+        <lastmod>2017-08-09T11:04:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/%E7%9E%8E%E8%AF%B4/</loc>
+        <lastmod>2017-09-13T00:56:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/Xshell/</loc>
-        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <lastmod>2017-10-15T06:09:26.459Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/Xftp/</loc>
-        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <lastmod>2017-10-15T06:09:26.459Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/Ubuntu/</loc>
-        <lastmod>2017-07-27T15:20:41.000Z</lastmod>
+        <lastmod>2017-10-15T06:09:26.459Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Toolbar/</loc>
+        <lastmod>2017-10-15T06:09:32.115Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/Android-Studio/</loc>
-        <lastmod>2017-07-27T15:22:35.000Z</lastmod>
+        <lastmod>2017-10-15T06:10:08.905Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/TextView/</loc>
-        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
+        <lastmod>2017-10-15T06:10:46.448Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/SpannableStringBuilder/</loc>
-        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
+        <lastmod>2017-10-15T06:10:46.448Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://laosiji.tech/tags/SpannableString/</loc>
-        <lastmod>2017-07-28T14:17:32.000Z</lastmod>
+        <lastmod>2017-10-15T06:10:46.448Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://laosiji.tech/tags/%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C/</loc>
-        <lastmod>2017-07-30T02:01:23.000Z</lastmod>
+        <loc>http://laosiji.tech/tags/Git/</loc>
+        <lastmod>2017-10-17T16:20:27.009Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/Android%E6%BA%90%E7%A0%81/</loc>
+        <lastmod>2017-11-22T11:56:31.442Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://laosiji.tech/tags/RxJava/</loc>
+        <lastmod>2018-01-06T10:54:00.504Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

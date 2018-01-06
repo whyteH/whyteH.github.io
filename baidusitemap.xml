@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://laosiji.tech/rxjava-subscribeon-observeon/</loc>
+    <lastmod>2018-01-06T10:54:00.504Z</lastmod>
+    <data>
+        <display>
+        <title>玩转RxJava之subscribeOn和observeOn</title>
+        <pubTime>2018-01-06T10:44:51.000Z</pubTime>
+        
+        <tag>RxJava</tag>
+         
+         
+           
+             
+              <breadCrumb title="RxJava" url="http://laosiji.tech/categories/RxJava/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Android-source-find-java-native-c/</loc>
     <lastmod>2017-11-22T11:56:31.442Z</lastmod>
     <data>
@@ -129,6 +149,66 @@
 
     
   <url>
+    <loc>http://laosiji.tech/Talk-iphone-X/</loc>
+    <lastmod>2017-09-13T00:56:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>也说说iphone X</title>
+        <pubTime>2017-09-13T00:21:52.000Z</pubTime>
+        
+        <tag>瞎说</tag>
+         
+         
+           
+             
+              <breadCrumb title="胡说八道" url="http://laosiji.tech/categories/%E8%83%A1%E8%AF%B4%E5%85%AB%E9%81%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Children's-Day/</loc>
+    <lastmod>2017-08-09T11:04:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>六一儿童节</title>
+        <pubTime>2017-06-01T14:10:08.000Z</pubTime>
+        
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/Write-blogs-realize/</loc>
+    <lastmod>2017-08-09T11:01:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>也说一下我为什么要写博客</title>
+        <pubTime>2017-07-29T20:50:47.000Z</pubTime>
+        
+        <tag>关于写作</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://laosiji.tech/Regex-matcher-phone-by-text/</loc>
     <lastmod>2017-07-26T11:24:38.000Z</lastmod>
     <data>
@@ -246,6 +326,26 @@
            
              
               <breadCrumb title="Kotlin" url="http://laosiji.tech/categories/Kotlin/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://laosiji.tech/About-cao-cao/</loc>
+    <lastmod>2017-07-09T07:00:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>“闲扯”一下曹操</title>
+        <pubTime>2017-07-08T04:49:50.000Z</pubTime>
+        
+        <tag>杂写</tag>
+         
+         
+           
+             
+              <breadCrumb title="三国" url="http://laosiji.tech/categories/%E4%B8%89%E5%9B%BD/"/>
           
         </display>
     </data>
@@ -399,5 +499,25 @@
     
     
     
+    
+  <url>
+    <loc>http://laosiji.tech/hello-world/</loc>
+    <lastmod>2017-05-25T12:42:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>hello</title>
+        <pubTime>2017-05-22T12:08:08.000Z</pubTime>
+        
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://laosiji.tech/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
 </urlset>
